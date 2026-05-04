@@ -1,0 +1,40 @@
+# Default: auto-detect text vs binary, normalize line endings in the repo.
+* text=auto
+
+# Source code — force LF on checkout
+*.py        text eol=lf
+*.js        text eol=lf
+*.jsx       text eol=lf
+*.ts        text eol=lf
+*.tsx       text eol=lf
+*.html      text eol=lf
+*.css       text eol=lf
+*.sh        text eol=lf
+
+# Config & docs — force LF on checkout
+*.md        text eol=lf
+*.json      text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.toml      text eol=lf
+*.txt       text eol=lf
+
+# Dotfiles — force LF on checkout
+.gitignore     text eol=lf
+.gitattributes text eol=lf
+.env.example   text eol=lf
+
+# Images — binary (no EOL conversion, no diffs)
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.pdf   binary
+
+# Lockfiles — binary (suppress noisy diffs; preserve byte-exact content)
+uv.lock           binary
+package-lock.json binary
+pnpm-lock.yaml    binary
+yarn.lock         binary
