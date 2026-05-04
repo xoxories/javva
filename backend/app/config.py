@@ -8,7 +8,10 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    anthropic_api_key: str = ""
+    llm_provider: str = "gemini"
+    gemini_api_key: str = ""
+    gemini_default_model: str = "gemini-2.5-flash"
+
     database_url: str = ""
     qdrant_url: str = ""
     qdrant_api_key: str = ""
