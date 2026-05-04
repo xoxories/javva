@@ -1,0 +1,2450 @@
+[
+  {
+    "id": "faq-forex_basics-1",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "What exactly is a currency pair in forex trading?",
+    "answer": "A currency pair represents the relative value of two different currencies. For example, in EUR/USD, the Euro (EUR) is the base currency and the US Dollar (USD) is the quote currency. It tells you how much of the quote currency you need to buy one unit of the base currency.",
+    "tags": [
+      "currency-pairs",
+      "forex",
+      "basics"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-2",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "How do I understand what a pip is?",
+    "answer": "A pip, which stands for 'percentage in point' or 'price interest point,' is the smallest unit of price change in a currency pair. For most pairs like EUR/USD, a pip is the fourth decimal place (0.0001). For Yen pairs, it's typically the second decimal place (0.01). Changes in pips determine your profit or loss.",
+    "tags": [
+      "pips",
+      "forex",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-3",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "Can you explain what a 'lot' means in trading?",
+    "answer": "A lot is a standard unit of measure for the size of a forex transaction. A standard lot is 100,000 units of the base currency. You can also trade in mini lots (10,000 units) or micro lots (1,000 units), allowing for flexible position sizing.",
+    "tags": [
+      "lots",
+      "forex",
+      "size"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-4",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "What is leverage, and how does it affect my trades?",
+    "answer": "Leverage allows you to control a larger position size with a smaller amount of capital. For example, with 100:1 leverage, you can control $100,000 worth of currency with just $1,000 in your account. While leverage can amplify profits, it also significantly magnifies potential losses.",
+    "tags": [
+      "leverage",
+      "forex",
+      "risk"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-5",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "How does margin work when I'm trading forex?",
+    "answer": "Margin is the amount of money required in your account to open and maintain a leveraged trading position. It's not a fee but rather a good faith deposit. The margin requirement depends on the leverage offered and the size of your trade.",
+    "tags": [
+      "margin",
+      "forex",
+      "account"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-6",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "What is the spread in forex?",
+    "answer": "The spread is the difference between the buy (ask) price and the sell (bid) price of a currency pair. It represents the broker's commission or fee for executing your trade. Tighter spreads mean lower trading costs, which is generally more favorable for traders.",
+    "tags": [
+      "spread",
+      "forex",
+      "costs"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-7",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "When does a swap or rollover occur?",
+    "answer": "A swap, also known as rollover, is the interest adjustment made to your account for holding a position open overnight. It's based on the interest rate differentials between the two currencies in the pair. Swaps can be positive or negative depending on the direction of your trade and the interest rates.",
+    "tags": [
+      "swap",
+      "rollover",
+      "interest"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-8",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "Are there specific times when forex markets are open?",
+    "answer": "Yes, the forex market operates 24 hours a day, five days a week, due to its global nature. Trading sessions overlap, starting in Sydney and Tokyo, then moving to London, and finally New York. This continuous operation provides ample trading opportunities.",
+    "tags": [
+      "market-hours",
+      "forex",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-9",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "What does 'base currency' mean in a currency pair?",
+    "answer": "The base currency is the first currency listed in a currency pair, like EUR in EUR/USD. It is the unit that is being bought or sold. Its value is quoted in terms of the second currency, known as the quote currency.",
+    "tags": [
+      "currency-pairs",
+      "forex",
+      "terminology"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-10",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "Could you define the 'quote currency'?",
+    "answer": "The quote currency is the second currency in a currency pair, such as USD in EUR/USD. It indicates how much of this currency is needed to purchase one unit of the base currency. The exchange rate of the pair is expressed in terms of the quote currency.",
+    "tags": [
+      "currency-pairs",
+      "forex",
+      "terminology"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-11",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "What's the difference between a bid and an ask price?",
+    "answer": "The bid price is the rate at which a dealer is willing to buy the base currency from you. The ask price is the rate at which a dealer is willing to sell the base currency to you. You buy at the ask price and sell at the bid price.",
+    "tags": [
+      "bid-ask",
+      "forex",
+      "prices"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-12",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "How do I calculate profit or loss in pips?",
+    "answer": "To calculate profit or loss in pips, you find the difference between your entry price and your exit price. For a standard pair like EUR/USD, if you buy at 1.1200 and sell at 1.1250, your profit is 50 pips. If you sell at 1.1200 and buy back at 1.1180, your profit is 20 pips.",
+    "tags": [
+      "pips",
+      "profit",
+      "loss"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-13",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "What is a mini lot and how does it differ from a standard lot?",
+    "answer": "A mini lot consists of 10,000 units of the base currency, whereas a standard lot is 100,000 units. Trading with mini lots allows for smaller trade sizes, reducing the capital required per trade and therefore the risk.",
+    "tags": [
+      "lots",
+      "mini-lot",
+      "forex"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-14",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "Is there a maximum leverage I can use?",
+    "answer": "The maximum leverage available can vary by broker and regulatory environment. For instance, Javva might offer up to 100:1 leverage, but regulations in certain regions could impose lower limits. Always check your broker's terms and conditions regarding leverage.",
+    "tags": [
+      "leverage",
+      "limits",
+      "forex"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-15",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "What is a margin call, and what should I do if I receive one?",
+    "answer": "A margin call occurs when your account equity falls below the required margin level to sustain your open positions. It's a warning that you need to add funds or close some positions to avoid automatic liquidation. It's crucial to manage your risk to prevent margin calls.",
+    "tags": [
+      "margin-call",
+      "forex",
+      "risk-management"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-16",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "Why do spreads sometimes widen?",
+    "answer": "Spreads can widen during periods of low liquidity, high market volatility (like during major news releases), or when markets are transitioning between trading sessions. Wider spreads increase your immediate trading cost.",
+    "tags": [
+      "spread",
+      "volatility",
+      "forex"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-17",
+    "category": "forex_basics",
+    "language": "en",
+    "question": "What are the main forex trading sessions, and when are they?",
+    "answer": "The three main sessions are the Sydney/Tokyo session (late Sunday/early Monday to Friday afternoon), the London session (mid-day to late afternoon EST), and the New York session (early morning to mid-afternoon EST). The London and New York sessions have the most volatility due to high trading volumes.",
+    "tags": [
+      "market-hours",
+      "sessions",
+      "forex"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-18",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Apa sebenarnya yang dimaksud dengan pasangan mata uang (currency pair) dalam trading forex?",
+    "answer": "Pasangan mata uang adalah inti dari trading forex, di mana Anda memperdagangkan satu mata uang terhadap mata uang lainnya. Contohnya, EUR/USD berarti Anda memperdagangkan Euro terhadap Dolar AS. Anda membeli EUR/USD jika Anda yakin Euro akan menguat terhadap Dolar, atau menjualnya jika sebaliknya.",
+    "tags": [
+      "forex",
+      "currency-pairs",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-19",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Bagaimana cara menghitung nilai satu pip dalam forex?",
+    "answer": "Satu pip (percentage in point) adalah pergerakan harga terkecil dalam sebuah pasangan mata uang. Untuk pasangan mayor seperti EUR/USD, satu pip biasanya bernilai 0.0001. Nilai pip dapat bervariasi tergantung pada ukuran lot yang Anda perdagangkan dan pasangan mata uangnya.",
+    "tags": [
+      "pip",
+      "forex",
+      "calculation"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-20",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Apa itu lot dan bagaimana ukurannya dalam trading forex?",
+    "answer": "Lot adalah unit standar untuk mengukur volume transaksi dalam trading forex. Ukuran lot standar adalah 100.000 unit mata uang dasar, namun Anda juga bisa memperdagangkan mini lot (10.000 unit) atau micro lot (1.000 unit). Pilihan ukuran lot menentukan seberapa besar potensi keuntungan atau kerugian Anda.",
+    "tags": [
+      "lot",
+      "forex",
+      "volume"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-21",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Jelaskan konsep leverage dalam trading forex?",
+    "answer": "Leverage memungkinkan Anda mengontrol posisi trading yang lebih besar dengan modal yang relatif kecil. Misalnya, dengan leverage 100:1, Anda bisa mengontrol $100.000 hanya dengan modal $1.000. Leverage dapat memperbesar potensi keuntungan, namun juga memperbesar potensi kerugian.",
+    "tags": [
+      "leverage",
+      "forex",
+      "risk"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-22",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Apa yang dimaksud dengan margin dalam trading forex?",
+    "answer": "Margin adalah sejumlah dana yang perlu Anda sediakan di akun trading Anda untuk membuka dan mempertahankan posisi. Ini bukan biaya, melainkan jaminan yang diminta broker. Margin yang dibutuhkan tergantung pada ukuran posisi, leverage, dan pasangan mata uang yang diperdagangkan.",
+    "tags": [
+      "margin",
+      "forex",
+      "account"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-23",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Bagaimana spread bekerja dalam trading forex?",
+    "answer": "Spread adalah selisih antara harga bid (jual) dan harga ask (beli) suatu pasangan mata uang. Ini adalah biaya utama yang dikenakan broker untuk setiap transaksi. Spread yang lebih ketat (lebih kecil) umumnya lebih menguntungkan bagi trader.",
+    "tags": [
+      "spread",
+      "forex",
+      "cost"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-24",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Apa itu swap atau rollover dalam trading forex?",
+    "answer": "Swap, atau rollover, adalah bunga yang dikenakan atau dibayarkan untuk posisi trading yang Anda tahan semalaman (melewati tengah malam waktu server). Bunga ini dihitung berdasarkan perbedaan suku bunga antara dua mata uang dalam pasangan tersebut.",
+    "tags": [
+      "swap",
+      "rollover",
+      "interest"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-25",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Kapan pasar forex buka dan tutup?",
+    "answer": "Pasar forex beroperasi 24 jam sehari, lima hari seminggu, dimulai dari Minggu malam hingga Jumat malam, waktu Indonesia. Pasar buka lebih awal di Asia dan berlanjut ke Eropa, lalu Amerika, menciptakan peluang trading sepanjang waktu.",
+    "tags": [
+      "market-hours",
+      "forex",
+      "trading-schedule"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-26",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Apa saja istilah dasar yang perlu diketahui pemula dalam forex?",
+    "answer": "Istilah dasar meliputi 'bid' (harga jual), 'ask' (harga beli), 'spread', 'pip', 'lot', 'leverage', 'margin', dan 'swap'. Memahami istilah ini sangat penting sebelum Anda mulai trading.",
+    "tags": [
+      "terminology",
+      "forex",
+      "beginner"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-27",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Mengapa penting memahami mata uang dasar (base currency) dan mata uang quote (quote currency)?",
+    "answer": "Mata uang dasar adalah mata uang pertama dalam pasangan (misalnya, EUR dalam EUR/USD), sedangkan mata uang quote adalah yang kedua (USD dalam EUR/USD). Nilai pasangan mata uang menunjukkan berapa banyak mata uang quote yang Anda butuhkan untuk membeli satu unit mata uang dasar.",
+    "tags": [
+      "currency-pairs",
+      "forex",
+      "basics"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-28",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Apa perbedaan antara trading forex di MT4 dan MT5?",
+    "answer": "MetaTrader 5 (MT5) adalah platform yang lebih baru dengan lebih banyak fitur dibandingkan MetaTrader 4 (MT4). MT5 menawarkan lebih banyak time frame, indikator teknis, kalender ekonomi terintegrasi, dan kemampuan trading yang lebih luas.",
+    "tags": [
+      "mt4",
+      "mt5",
+      "platform"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-29",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Bagaimana cara kerja order 'stop loss' dalam trading?",
+    "answer": "Order stop loss adalah instruksi untuk menutup posisi trading Anda secara otomatis jika harga mencapai level kerugian tertentu yang telah Anda tentukan. Ini adalah alat manajemen risiko penting untuk membatasi potensi kerugian Anda.",
+    "tags": [
+      "stop-loss",
+      "risk-management",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-30",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Apa itu order 'take profit' dan mengapa harus digunakan?",
+    "answer": "Order take profit adalah instruksi untuk menutup posisi trading Anda secara otomatis ketika mencapai level keuntungan yang diinginkan. Penggunaan take profit membantu Anda mengunci keuntungan sebelum pasar berbalik arah.",
+    "tags": [
+      "take-profit",
+      "trading-strategy",
+      "forex"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-31",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Apa yang dimaksud dengan 'long' dan 'short' dalam trading forex?",
+    "answer": "Posisi 'long' berarti Anda membeli pasangan mata uang dengan harapan harganya akan naik. Sebaliknya, posisi 'short' berarti Anda menjual pasangan mata uang dengan harapan harganya akan turun.",
+    "tags": [
+      "long-short",
+      "forex",
+      "trading-terms"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-32",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Seberapa besar risiko menggunakan leverage tinggi dalam trading forex?",
+    "answer": "Leverage tinggi dapat memperbesar keuntungan, tetapi juga memperbesar kerugian secara signifikan. Dengan leverage 100:1, kerugian kecil pada posisi Anda bisa menghabiskan seluruh margin Anda dengan cepat.",
+    "tags": [
+      "leverage",
+      "risk",
+      "forex"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-33",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Apa itu 'pip value' dan bagaimana pengaruhnya terhadap trading?",
+    "answer": "Nilai pip adalah nilai moneter dari pergerakan satu pip dalam satu lot trading. Nilai ini penting untuk menghitung potensi keuntungan atau kerugian Anda. Misalnya, pada EUR/USD dengan lot standar, 1 pip bisa bernilai sekitar $10.",
+    "tags": [
+      "pip",
+      "value",
+      "forex"
+    ]
+  },
+  {
+    "id": "faq-forex_basics-34",
+    "category": "forex_basics",
+    "language": "id",
+    "question": "Bagaimana spread yang tipis biasanya dicapai di pasar forex?",
+    "answer": "Spread yang tipis sering kali terjadi pada pasangan mata uang mayor seperti EUR/USD saat jam aktif pasar Eropa dan Amerika, di mana likuiditas tinggi. Broker terkemuka yang terhubung ke bank-bank tier-1 biasanya menawarkan spread yang lebih ketat.",
+    "tags": [
+      "spread",
+      "liquidity",
+      "forex"
+    ]
+  },
+  {
+    "id": "faq-account_management-1",
+    "category": "account_management",
+    "language": "en",
+    "question": "How can I open a new trading account with Javva?",
+    "answer": "To open a new account, simply navigate to the 'Open Account' section on our website. You'll be prompted to choose an account type (e.g., Standard, Cent, ECN) and fill in your personal details. Once submitted, your account will be set up, and you'll receive your login credentials.",
+    "tags": [
+      "account",
+      "opening",
+      "new"
+    ]
+  },
+  {
+    "id": "faq-account_management-2",
+    "category": "account_management",
+    "language": "en",
+    "question": "What are the different types of trading accounts available?",
+    "answer": "Javva offers several account types to suit different trading styles. These include Demo accounts for practice, Standard accounts for general trading, Cent accounts for beginners with smaller capital, and ECN accounts for advanced traders seeking direct market access. Each type has specific features regarding leverage, spreads, and minimum deposit.",
+    "tags": [
+      "account",
+      "types",
+      "features"
+    ]
+  },
+  {
+    "id": "faq-account_management-3",
+    "category": "account_management",
+    "language": "en",
+    "question": "Can I have multiple trading accounts under one profile?",
+    "answer": "Yes, you can manage multiple trading accounts from a single user profile. This is useful if you wish to segregate funds for different strategies or test various account types. Simply log in to your client portal and select the option to open an additional account.",
+    "tags": [
+      "multiple",
+      "accounts",
+      "profile"
+    ]
+  },
+  {
+    "id": "faq-account_management-4",
+    "category": "account_management",
+    "language": "en",
+    "question": "How do I change my registered email address?",
+    "answer": "To update your email address, log in to your client portal and go to the 'Profile Settings' or 'Account Details' section. You will find an option to edit your email address, which will likely require a verification step for security. Follow the on-screen instructions to complete the change.",
+    "tags": [
+      "email",
+      "change",
+      "profile"
+    ]
+  },
+  {
+    "id": "faq-account_management-5",
+    "category": "account_management",
+    "language": "en",
+    "question": "What is the process for resetting my trading account password?",
+    "answer": "If you've forgotten your password, click on the 'Forgot Password' link on the login page. You will receive an email with instructions to reset your password. Ensure you check your spam folder if you don't see the email in your inbox within a few minutes.",
+    "tags": [
+      "password",
+      "reset",
+      "login"
+    ]
+  },
+  {
+    "id": "faq-account_management-6",
+    "category": "account_management",
+    "language": "en",
+    "question": "How long does account verification typically take?",
+    "answer": "Account verification usually takes 24-48 business hours after you have submitted all required documents. Our team will review your submission, and you'll be notified via email once your account is fully verified. Prompt submission of clear documents speeds up the process.",
+    "tags": [
+      "verification",
+      "documents",
+      "process"
+    ]
+  },
+  {
+    "id": "faq-account_management-7",
+    "category": "account_management",
+    "language": "en",
+    "question": "What documents are needed for account verification?",
+    "answer": "Typically, we require a copy of your government-issued ID (like a passport or driver's license) and a proof of address document (such as a recent utility bill or bank statement). These documents help us comply with regulatory requirements and ensure the security of your account.",
+    "tags": [
+      "verification",
+      "documents",
+      "id"
+    ]
+  },
+  {
+    "id": "faq-account_management-8",
+    "category": "account_management",
+    "language": "en",
+    "question": "Can I use a demo account to practice trading strategies?",
+    "answer": "Absolutely! Our demo accounts are designed for risk-free practice. You can use them to familiarize yourself with the MetaTrader platform, test trading strategies, and understand market dynamics using virtual funds without any financial commitment.",
+    "tags": [
+      "demo",
+      "practice",
+      "strategy"
+    ]
+  },
+  {
+    "id": "faq-account_management-9",
+    "category": "account_management",
+    "language": "en",
+    "question": "What is the difference between a Standard and a Cent account?",
+    "answer": "A Standard account uses standard lot sizes, whereas a Cent account uses lot sizes based on cents (e.g., 0.01 lots are 100 units). Cent accounts are ideal for beginners or those trading with smaller capital, as they allow for trading with smaller position sizes and lower risk exposure.",
+    "tags": [
+      "standard",
+      "cent",
+      "account-types"
+    ]
+  },
+  {
+    "id": "faq-account_management-10",
+    "category": "account_management",
+    "language": "en",
+    "question": "What is an ECN account and who is it best suited for?",
+    "answer": "An ECN (Electronic Communication Network) account provides direct access to the interbank market, meaning your trades are matched with orders from other participants. This typically results in tighter spreads and faster execution, making it ideal for experienced traders who require maximum transparency and speed.",
+    "tags": [
+      "ecn",
+      "spreads",
+      "advanced"
+    ]
+  },
+  {
+    "id": "faq-account_management-11",
+    "category": "account_management",
+    "language": "en",
+    "question": "How do I update my personal information, like my address?",
+    "answer": "You can update your personal details, including your address, by logging into your client portal. Navigate to the 'Profile' or 'Personal Information' section and select the option to edit your details. You may need to provide supporting documents for certain changes, such as address verification.",
+    "tags": [
+      "profile",
+      "update",
+      "address"
+    ]
+  },
+  {
+    "id": "faq-account_management-12",
+    "category": "account_management",
+    "language": "en",
+    "question": "Is it possible to close my trading account permanently?",
+    "answer": "Yes, you can request to close your trading account. Please contact our customer support team through the client portal or via email, specifying your request to close the account. We will guide you through the necessary steps, which may include withdrawing any remaining funds.",
+    "tags": [
+      "close",
+      "account",
+      "withdrawal"
+    ]
+  },
+  {
+    "id": "faq-account_management-13",
+    "category": "account_management",
+    "language": "en",
+    "question": "What happens to my open trades if I close my account?",
+    "answer": "If you close your trading account, any open trades will be automatically closed at the prevailing market price. It is highly recommended to close all your open positions and withdraw all your funds before submitting an account closure request to avoid any complications.",
+    "tags": [
+      "account",
+      "closure",
+      "trades"
+    ]
+  },
+  {
+    "id": "faq-account_management-14",
+    "category": "account_management",
+    "language": "en",
+    "question": "How can I check the verification status of my account?",
+    "answer": "You can check your account's verification status by logging into your client portal. Navigate to the 'Account Verification' or 'My Account' section, where you will see the current status and any pending actions required. You will also receive email notifications regarding your verification progress.",
+    "tags": [
+      "verification",
+      "status",
+      "account"
+    ]
+  },
+  {
+    "id": "faq-account_management-15",
+    "category": "account_management",
+    "language": "en",
+    "question": "What leverage is available on Javva trading accounts?",
+    "answer": "Javva offers leverage up to 100:1 on most account types, allowing you to control larger positions with a smaller amount of capital. Leverage can amplify both profits and losses, so it's crucial to use it wisely and manage your risk effectively.",
+    "tags": [
+      "leverage",
+      "trading",
+      "risk"
+    ]
+  },
+  {
+    "id": "faq-account_management-16",
+    "category": "account_management",
+    "language": "en",
+    "question": "Are there different spreads for different account types?",
+    "answer": "Yes, spreads can vary depending on the account type you choose. ECN accounts typically offer the lowest spreads, often starting from 0.1 pips on major pairs like EUR/USD, due to direct market access. Standard and Cent accounts may have slightly higher spreads.",
+    "tags": [
+      "spreads",
+      "account-types",
+      "ecn"
+    ]
+  },
+  {
+    "id": "faq-account_management-17",
+    "category": "account_management",
+    "language": "en",
+    "question": "Can I change my account currency after opening it?",
+    "answer": "Unfortunately, the account currency cannot be changed after the account has been opened. When you open a new account, you select your preferred base currency, and this selection is permanent for that specific account. You would need to open a new account if you wish to use a different base currency.",
+    "tags": [
+      "account",
+      "currency",
+      "settings"
+    ]
+  },
+  {
+    "id": "faq-account_management-18",
+    "category": "account_management",
+    "language": "id",
+    "question": "Bagaimana cara membuka akun demo di Javva?",
+    "answer": "Untuk membuka akun demo, cukup kunjungi halaman 'Buka Akun' di situs web Javva. Pilih opsi 'Akun Demo' dan lengkapi formulir pendaftaran singkat. Anda akan segera menerima detail login untuk platform MetaTrader Anda.",
+    "tags": [
+      "akun-demo",
+      "pendaftaran",
+      "mt4"
+    ]
+  },
+  {
+    "id": "faq-account_management-19",
+    "category": "account_management",
+    "language": "id",
+    "question": "Apa perbedaan antara akun Standard dan ECN?",
+    "answer": "Akun Standard biasanya memiliki spread yang lebih lebar dan eksekusi market maker, cocok untuk pemula. Akun ECN menawarkan spread yang lebih ketat langsung dari likuiditas tier-1 bank, dengan komisi per trade, ideal untuk trader yang mencari eksekusi cepat dan biaya lebih rendah pada volume tinggi.",
+    "tags": [
+      "tipe-akun",
+      "spread",
+      "ecn"
+    ]
+  },
+  {
+    "id": "faq-account_management-20",
+    "category": "account_management",
+    "language": "id",
+    "question": "Apakah saya bisa mengubah tipe akun setelah dibuka?",
+    "answer": "Ya, Anda bisa mengajukan perubahan tipe akun melalui Area Klien Anda. Setelah permintaan diajukan, tim kami akan memprosesnya dan memberi tahu Anda jika ada langkah tambahan yang diperlukan.",
+    "tags": [
+      "manajemen-akun",
+      "tipe-akun",
+      "ubah"
+    ]
+  },
+  {
+    "id": "faq-account_management-21",
+    "category": "account_management",
+    "language": "id",
+    "question": "Bagaimana cara memperbarui informasi profil saya?",
+    "answer": "Anda dapat memperbarui informasi profil seperti nomor telepon atau alamat di Area Klien. Masuk ke akun Anda, navigasikan ke bagian 'Profil Saya', dan pilih 'Edit' untuk melakukan perubahan yang diperlukan.",
+    "tags": [
+      "profil",
+      "pembaruan",
+      "area-klien"
+    ]
+  },
+  {
+    "id": "faq-account_management-22",
+    "category": "account_management",
+    "language": "id",
+    "question": "Saya lupa kata sandi akun saya, bagaimana cara meresetnya?",
+    "answer": "Jika Anda lupa kata sandi, klik tautan 'Lupa Kata Sandi' di halaman login Area Klien. Masukkan alamat email terdaftar Anda, dan Anda akan menerima instruksi untuk membuat kata sandi baru.",
+    "tags": [
+      "kata-sandi",
+      "reset",
+      "keamanan"
+    ]
+  },
+  {
+    "id": "faq-account_management-23",
+    "category": "account_management",
+    "language": "id",
+    "question": "Bisakah saya mengubah alamat email yang terdaftar di akun saya?",
+    "answer": "Ya, Anda bisa mengubah alamat email terdaftar Anda melalui pengaturan keamanan di Area Klien. Anda mungkin perlu melakukan verifikasi email baru untuk menyelesaikan proses ini demi keamanan akun Anda.",
+    "tags": [
+      "email",
+      "keamanan",
+      "ubah"
+    ]
+  },
+  {
+    "id": "faq-account_management-24",
+    "category": "account_management",
+    "language": "id",
+    "question": "Apa saja dokumen yang diperlukan untuk verifikasi akun?",
+    "answer": "Untuk verifikasi, kami biasanya memerlukan salinan identitas yang valid (KTP/Paspor) dan bukti alamat (tagihan utilitas/rekening koran) yang dikeluarkan dalam 3 bulan terakhir.",
+    "tags": [
+      "verifikasi",
+      "dokumen",
+      "kتقد"
+    ]
+  },
+  {
+    "id": "faq-account_management-25",
+    "category": "account_management",
+    "language": "id",
+    "question": "Berapa lama proses verifikasi akun biasanya memakan waktu?",
+    "answer": "Proses verifikasi biasanya memakan waktu 1-2 hari kerja setelah semua dokumen yang diperlukan diterima dengan benar. Kami akan memberi tahu Anda melalui email setelah akun Anda diverifikasi.",
+    "tags": [
+      "verifikasi",
+      "waktu-proses",
+      "dokumen"
+    ]
+  },
+  {
+    "id": "faq-account_management-26",
+    "category": "account_management",
+    "language": "id",
+    "question": "Bagaimana cara menutup akun trading saya di Javva?",
+    "answer": "Untuk menutup akun, silakan hubungi tim dukungan pelanggan kami melalui chat atau email. Jelaskan permintaan Anda untuk menutup akun, dan mereka akan memandu Anda melalui prosesnya, termasuk penarikan dana yang tersisa.",
+    "tags": [
+      "tutup-akun",
+      "dukungan",
+      "penarikan"
+    ]
+  },
+  {
+    "id": "faq-account_management-27",
+    "category": "account_management",
+    "language": "id",
+    "question": "Apakah ada biaya untuk membuka akun Standard?",
+    "answer": "Membuka akun Standard di Javva tidak dikenakan biaya. Anda dapat mulai trading setelah melakukan deposit awal sesuai dengan persyaratan minimum akun.",
+    "tags": [
+      "biaya-akun",
+      "akun-standard",
+      "gratis"
+    ]
+  },
+  {
+    "id": "faq-account_management-28",
+    "category": "account_management",
+    "language": "id",
+    "question": "Berapa leverage maksimum yang ditawarkan untuk akun Standard?",
+    "answer": "Kami menawarkan leverage hingga 1:100 pada akun Standard, yang memungkinkan Anda mengontrol posisi yang lebih besar dengan margin yang lebih kecil. Harap gunakan leverage dengan bijak karena dapat memperbesar keuntungan maupun kerugian.",
+    "tags": [
+      "leverage",
+      "akun-standard",
+      "risiko"
+    ]
+  },
+  {
+    "id": "faq-account_management-29",
+    "category": "account_management",
+    "language": "id",
+    "question": "Apa itu akun Cent dan siapa yang cocok menggunakannya?",
+    "answer": "Akun Cent ideal untuk trader pemula atau mereka yang ingin berlatih dengan uang sungguhan menggunakan risiko yang lebih rendah. Unit akun diukur dalam sen (cent), sehingga Anda dapat menguji strategi dengan modal kecil.",
+    "tags": [
+      "akun-cent",
+      "pemula",
+      "risiko-rendah"
+    ]
+  },
+  {
+    "id": "faq-account_management-30",
+    "category": "account_management",
+    "language": "id",
+    "question": "Bagaimana cara mengajukan keluhan terkait akun saya?",
+    "answer": "Jika Anda memiliki keluhan, silakan kirimkan email detail ke tim dukungan kami. Kami akan menyelidiki masalah tersebut secara menyeluruh dan memberikan tanggapan dalam waktu yang wajar.",
+    "tags": [
+      "keluhan",
+      "dukungan",
+      "penyelesaian-masalah"
+    ]
+  },
+  {
+    "id": "faq-account_management-31",
+    "category": "account_management",
+    "language": "id",
+    "question": "Apakah status verifikasi akun saya memengaruhi kemampuan trading saya?",
+    "answer": "Akun yang belum diverifikasi mungkin memiliki batasan pada penarikan dana atau fitur tertentu. Verifikasi akun memastikan keamanan dan kepatuhan, serta membuka akses penuh ke semua layanan kami.",
+    "tags": [
+      "verifikasi",
+      "batasan",
+      "keamanan"
+    ]
+  },
+  {
+    "id": "faq-account_management-32",
+    "category": "account_management",
+    "language": "id",
+    "question": "Saya ingin mengubah nama di akun saya karena pernikahan, bisakah?",
+    "answer": "Perubahan nama karena pernikahan dimungkinkan, namun memerlukan dokumen pendukung seperti akta nikah dan identitas baru. Silakan hubungi dukungan pelanggan untuk detail prosedur dan dokumen yang dibutuhkan.",
+    "tags": [
+      "ubah-nama",
+      "profil",
+      "dokumen"
+    ]
+  },
+  {
+    "id": "faq-account_management-33",
+    "category": "account_management",
+    "language": "id",
+    "question": "Apakah ada biaya tersembunyi untuk menggunakan akun ECN?",
+    "answer": "Akun ECN kami transparan mengenai biayanya. Selain spread yang sangat ketat yang berasal dari pasar, mungkin ada komisi kecil per lot yang diperdagangkan, yang akan diinformasikan dengan jelas.",
+    "tags": [
+      "biaya",
+      "ecn",
+      "komisi"
+    ]
+  },
+  {
+    "id": "faq-account_management-34",
+    "category": "account_management",
+    "language": "id",
+    "question": "Bagaimana cara mengganti platform trading dari MT4 ke MT5?",
+    "answer": "Anda tidak perlu mengganti akun Anda. Cukup unduh platform MetaTrader 5 dari situs web kami dan login menggunakan kredensial akun trading Anda yang sudah ada. Anda bisa beralih antar platform kapan saja.",
+    "tags": [
+      "mt4",
+      "mt5",
+      "platform"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-1",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "What are the available methods for depositing funds into my Javva trading account?",
+    "answer": "You can deposit funds using several convenient methods, including traditional bank transfers, popular e-wallets like Skrill and Neteller, and various cryptocurrencies. Each method may have different processing times and potential fees, so we recommend checking the specifics before initiating a transaction. Our platform supports seamless integration with these payment providers to ensure a smooth funding experience.",
+    "tags": [
+      "deposits",
+      "payment-methods",
+      "funding"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-2",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "How long does it typically take for my deposit to reflect in my Javva account?",
+    "answer": "Bank transfers usually take 1-3 business days to process, depending on your bank and intermediary banks. E-wallet and cryptocurrency deposits are generally much faster, often reflecting in your account within minutes to a few hours after confirmation. We strive to process all deposits as quickly as possible to minimize any disruption to your trading activities.",
+    "tags": [
+      "deposits",
+      "processing-time",
+      "funding"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-3",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "Are there any fees associated with making a deposit to Javva?",
+    "answer": "Javva does not charge any fees for making deposits, regardless of the method you choose. However, your bank or e-wallet provider might impose their own transaction fees, which are outside of our control. Please consult your payment provider for details on any potential charges they may apply to your deposit.",
+    "tags": [
+      "deposits",
+      "fees",
+      "funding"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-4",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "What is the minimum amount I can deposit into my Javva account?",
+    "answer": "The minimum deposit amount required to open and fund your Javva trading account is typically $100 USD or its equivalent in other currencies. This allows traders of all levels to get started with our platform. Please check our 'Deposits & Withdrawals' page for the most up-to-date minimums for each payment method.",
+    "tags": [
+      "deposits",
+      "minimums",
+      "funding"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-5",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "Can I deposit funds in a currency other than USD to my Javva account?",
+    "answer": "Yes, Javva supports deposits in multiple major currencies. When you deposit in a currency different from your account's base currency, a currency conversion will be applied. Please be aware that conversion rates and potential conversion fees are determined by your payment provider or bank.",
+    "tags": [
+      "deposits",
+      "currency-conversion",
+      "funding"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-6",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "How do I withdraw profits from my Javva trading account?",
+    "answer": "To withdraw funds, simply log in to your Javva client portal, navigate to the 'Withdrawals' section, and select your preferred withdrawal method. You will need to provide the necessary details for the transaction, such as bank account information or e-wallet address. Ensure your account is verified to avoid any delays in processing your withdrawal request.",
+    "tags": [
+      "withdrawals",
+      "payment-methods",
+      "profits"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-7",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "What is the typical processing time for withdrawal requests at Javva?",
+    "answer": "We aim to process all withdrawal requests within 24 business hours after they are submitted. Once processed by Javva, the time it takes for the funds to reach your bank account or e-wallet depends on the chosen method and your bank's procedures, usually taking an additional 1-5 business days. Cryptocurrency withdrawals are often faster once confirmed on the blockchain.",
+    "tags": [
+      "withdrawals",
+      "processing-time",
+      "profits"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-8",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "Are there any fees for withdrawing money from my Javva account?",
+    "answer": "Javva does not charge any fees for standard withdrawals made via bank transfer or e-wallet up to a certain monthly limit. Exceeding this limit or opting for expedited processing may incur a nominal fee. Please refer to our 'Fees Schedule' for detailed information on withdrawal costs.",
+    "tags": [
+      "withdrawals",
+      "fees",
+      "profits"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-9",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "What are the daily or monthly limits for withdrawing funds from Javva?",
+    "answer": "We have established withdrawal limits to ensure security and operational efficiency. Typically, you can withdraw up to $10,000 USD per day and $50,000 USD per month without special authorization. For larger amounts, please contact our support team, and we will assist you with the process.",
+    "tags": [
+      "withdrawals",
+      "limits",
+      "profits"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-10",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "Can I withdraw funds to a different bank account or e-wallet than the one I deposited from?",
+    "answer": "For security reasons and to comply with anti-money laundering regulations, withdrawals must generally be made to the same source from which the funds were deposited. If you need to withdraw to a different account, please contact our support team with a clear explanation and necessary documentation for review.",
+    "tags": [
+      "withdrawals",
+      "security",
+      "compliance"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-11",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "What happens if my deposit is made in a different currency than my Javva account base currency?",
+    "answer": "When you deposit funds in a currency different from your account's base currency (e.g., depositing EUR into a USD-based account), Javva will convert the funds at the prevailing interbank exchange rate. The conversion rate may include a small spread, and your bank or payment provider might also apply their own fees or rates.",
+    "tags": [
+      "currency-conversion",
+      "deposits",
+      "funding"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-12",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "How are currency conversions handled for withdrawals from Javva?",
+    "answer": "If you withdraw funds in a currency different from your account's base currency, Javva will perform the conversion based on current market rates. Similar to deposits, a small spread might be applied during the conversion process. It's advisable to check the exchange rate at the time of your withdrawal request.",
+    "tags": [
+      "currency-conversion",
+      "withdrawals",
+      "profits"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-13",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "Is there a minimum withdrawal amount required by Javva?",
+    "answer": "Yes, the minimum withdrawal amount from your Javva account is typically $50 USD or its equivalent in other supported currencies. This minimum helps to cover the processing costs associated with each transaction. Please ensure your available balance exceeds this amount before initiating a withdrawal.",
+    "tags": [
+      "withdrawals",
+      "minimums",
+      "profits"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-14",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "What are the accepted cryptocurrency deposit options on Javva?",
+    "answer": "Javva accepts deposits via several popular cryptocurrencies, including Bitcoin (BTC) and Ethereum (ETH). You will be provided with a unique wallet address for each deposit. Please ensure you send the correct cryptocurrency to the correct address to avoid loss of funds. Transaction times depend on the cryptocurrency network.",
+    "tags": [
+      "crypto",
+      "deposits",
+      "funding"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-15",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "Can I deposit funds using my credit card or debit card on Javva?",
+    "answer": "Currently, Javva does not directly accept deposits via credit or debit cards. Our primary deposit methods include bank transfers, e-wallets, and cryptocurrencies. We recommend using one of these available options for funding your trading account securely and efficiently.",
+    "tags": [
+      "deposits",
+      "payment-methods",
+      "credit-card"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-16",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "What is Javva's policy on refunds for deposits or withdrawals?",
+    "answer": "Refunds for deposits are generally not possible once the funds have been allocated to your trading account and used for trading. If you believe there has been an error with a transaction, please contact our customer support team immediately with all relevant details. Withdrawal policies are strictly followed, and funds are sent only upon explicit request.",
+    "tags": [
+      "refunds",
+      "deposits",
+      "withdrawals"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-17",
+    "category": "deposits_withdrawals",
+    "language": "en",
+    "question": "How can I check the status of my deposit or withdrawal request?",
+    "answer": "You can easily track the status of your transactions by logging into your Javva client portal. Navigate to the 'Transaction History' or 'Statement' section, where all your deposits and withdrawals will be listed with their current status. For any issues, our support team is available to provide assistance.",
+    "tags": [
+      "status",
+      "deposits",
+      "withdrawals"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-18",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Bagaimana cara saya melakukan deposit ke akun trading Javva saya?",
+    "answer": "Anda dapat melakukan deposit dengan mudah melalui halaman 'Dana' di platform Javva. Kami mendukung berbagai metode pembayaran, termasuk transfer bank lokal, e-wallet populer, dan cryptocurrency. Pilih metode yang paling nyaman bagi Anda dan ikuti instruksi di layar.",
+    "tags": [
+      "deposit",
+      "payment",
+      "funding"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-19",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Berapa lama waktu yang dibutuhkan agar deposit saya masuk ke akun?",
+    "answer": "Waktu pemrosesan deposit bervariasi tergantung metode yang Anda pilih. Transfer bank lokal biasanya memakan waktu 1-3 jam kerja. Deposit melalui e-wallet dan crypto umumnya diproses lebih cepat, seringkali dalam hitungan menit setelah konfirmasi jaringan.",
+    "tags": [
+      "deposit",
+      "processing-time",
+      "instant"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-20",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Apakah ada biaya yang dikenakan untuk melakukan deposit?",
+    "answer": "Javva tidak mengenakan biaya administrasi untuk deposit. Namun, penyedia layanan pembayaran Anda mungkin mengenakan biaya transaksi, terutama untuk transfer antar bank atau konversi mata uang. Harap periksa syarat dan ketentuan penyedia layanan Anda.",
+    "tags": [
+      "deposit",
+      "fees",
+      "charges"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-21",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Berapa jumlah minimum yang bisa saya deposit?",
+    "answer": "Jumlah deposit minimum kami adalah $100 USD atau setara dalam mata uang Anda. Ini memastikan Anda memiliki cukup modal untuk memulai trading dengan nyaman, terutama saat memanfaatkan leverage hingga 100:1 yang kami tawarkan.",
+    "tags": [
+      "deposit",
+      "minimum",
+      "funding"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-22",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Metode penarikan apa saja yang tersedia di Javva?",
+    "answer": "Untuk penarikan, kami menyediakan opsi yang sama dengan deposit: transfer bank lokal, e-wallet, dan cryptocurrency. Ini memberikan fleksibilitas bagi Anda untuk menarik dana menggunakan metode yang paling sesuai.",
+    "tags": [
+      "withdrawal",
+      "payment-methods",
+      "cashout"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-23",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Berapa lama proses penarikan dana dari akun Javva?",
+    "answer": "Kami berusaha memproses permintaan penarikan Anda secepat mungkin, biasanya dalam 24 jam kerja. Setelah diproses oleh Javva, waktu penerimaan dana akan tergantung pada metode penarikan dan bank tujuan Anda.",
+    "tags": [
+      "withdrawal",
+      "processing-time",
+      "cashout"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-24",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Apakah ada biaya untuk menarik dana?",
+    "answer": "Javva tidak mengenakan biaya untuk penarikan dana selama Anda mematuhi syarat dan ketentuan platform. Namun, biaya dari bank perantara atau bank penerima mungkin berlaku, tergantung pada sistem perbankan yang digunakan.",
+    "tags": [
+      "withdrawal",
+      "fees",
+      "charges"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-25",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Berapa jumlah maksimum yang bisa saya tarik dalam satu waktu?",
+    "answer": "Batas penarikan harian kami adalah $10.000 USD atau setara. Untuk jumlah yang lebih besar, silakan hubungi tim support kami untuk pengaturan khusus. Kami memastikan proses penarikan aman dan efisien.",
+    "tags": [
+      "withdrawal",
+      "limits",
+      "cashout"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-26",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Bagaimana jika saya ingin menarik dana ke rekening bank yang berbeda dari tempat saya deposit?",
+    "answer": "Secara umum, kami mendorong penarikan ke rekening bank yang sama dengan sumber deposit Anda untuk alasan keamanan dan kepatuhan regulasi anti pencucian uang. Namun, kami dapat mempertimbangkan pengecualian dengan verifikasi tambahan.",
+    "tags": [
+      "withdrawal",
+      "security",
+      "compliance"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-27",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Bisakah saya deposit menggunakan kartu kredit atau debit?",
+    "answer": "Saat ini, kami tidak menerima deposit langsung melalui kartu kredit atau debit. Kami merekomendasikan penggunaan transfer bank atau e-wallet yang terintegrasi untuk kemudahan dan kecepatan transaksi.",
+    "tags": [
+      "deposit",
+      "credit-card",
+      "payment-methods"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-28",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Mata uang apa saja yang bisa saya gunakan untuk deposit dan withdrawal?",
+    "answer": "Anda dapat mendepositkan dan menarik dana dalam berbagai mata uang utama, termasuk USD, EUR, dan IDR. Platform kami akan mengkonversi dana jika diperlukan, namun perhatikan potensi biaya konversi mata uang dari penyedia pembayaran Anda.",
+    "tags": [
+      "deposit",
+      "withdrawal",
+      "currency"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-29",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Apa yang terjadi jika saya salah memasukkan detail saat melakukan deposit?",
+    "answer": "Jika Anda salah memasukkan detail deposit, dana Anda mungkin tidak sampai ke akun. Segera hubungi tim support kami dengan bukti transaksi (ID transaksi, jumlah, tanggal) agar kami dapat membantu melacak dan memprosesnya.",
+    "tags": [
+      "deposit",
+      "error",
+      "support"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-30",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Bagaimana jika permintaan penarikan saya ditolak?",
+    "answer": "Permintaan penarikan dapat ditolak jika ada ketidaksesuaian data, belum terpenuhinya persyaratan trading (jika ada bonus), atau jika akun Anda sedang dalam verifikasi. Tim kami akan memberi tahu Anda alasannya dan langkah selanjutnya.",
+    "tags": [
+      "withdrawal",
+      "rejected",
+      "support"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-31",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Apakah saya bisa deposit menggunakan dompet crypto seperti Metamask?",
+    "answer": "Ya, kami mendukung deposit melalui beberapa dompet cryptocurrency populer, termasuk Metamask. Pastikan Anda memilih jaringan blockchain yang benar saat mengirim dana untuk memastikan transaksi berhasil.",
+    "tags": [
+      "deposit",
+      "crypto",
+      "metamask"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-32",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Berapa lama waktu yang dibutuhkan untuk dana crypto masuk ke akun saya?",
+    "answer": "Deposit menggunakan cryptocurrency biasanya sangat cepat, tergantung pada konfirmasi jaringan blockchain. Setelah beberapa konfirmasi jaringan yang diperlukan, dana akan segera tersedia di akun trading Javva Anda, seringkali dalam waktu kurang dari 30 menit.",
+    "tags": [
+      "deposit",
+      "crypto",
+      "processing-time"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-33",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Adakah batasan mata uang asing saat menarik dana?",
+    "answer": "Anda dapat menarik dana dalam mata uang yang berbeda dari mata uang akun Anda, namun bank atau penyedia pembayaran Anda mungkin mengenakan biaya konversi. Pastikan untuk memeriksa kurs dan biaya yang berlaku sebelum melakukan penarikan.",
+    "tags": [
+      "withdrawal",
+      "currency-conversion",
+      "fees"
+    ]
+  },
+  {
+    "id": "faq-deposits_withdrawals-34",
+    "category": "deposits_withdrawals",
+    "language": "id",
+    "question": "Bagaimana kebijakan Javva terkait refund atau pengembalian dana?",
+    "answer": "Javva tidak memproses refund secara langsung untuk dana yang telah digunakan untuk trading atau mengalami kerugian. Pengembalian dana hanya dapat dipertimbangkan dalam kasus kesalahan transaksi deposit yang tidak disengaja dan dapat diverifikasi.",
+    "tags": [
+      "refund",
+      "policy",
+      "withdrawal"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-1",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "Why does Javva need my documents for KYC?",
+    "answer": "Javva is required by financial regulators to verify the identity of its clients. This process, known as Know Your Customer (KYC), helps prevent fraud, money laundering, and ensures compliance with international financial standards. Providing the necessary documents allows us to protect your account and maintain a secure trading environment.",
+    "tags": [
+      "kyc",
+      "verification",
+      "documents"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-2",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "What kind of identification documents are acceptable for verification?",
+    "answer": "We typically require a government-issued photo ID, such as a passport or driver's license, and proof of address, like a utility bill or bank statement. The documents must be clear, valid, and show your full name and address. Please ensure all four corners of the documents are visible when submitting.",
+    "tags": [
+      "verification",
+      "documents",
+      "id"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-3",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "How long does the KYC verification process usually take?",
+    "answer": "Once you submit all the required documents, our team will review them promptly. Typically, verification is completed within 24-48 business hours. You will receive an email notification once your account has been successfully verified.",
+    "tags": [
+      "kyc",
+      "verification",
+      "process"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-4",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "What is two-factor authentication (2FA) and how do I set it up?",
+    "answer": "Two-factor authentication adds an extra layer of security to your account by requiring a second verification step beyond your password. You can enable 2FA through your account settings, usually by linking it to an authenticator app on your smartphone. This significantly reduces the risk of unauthorized access.",
+    "tags": [
+      "security",
+      "2fa",
+      "authentication"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-5",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "I forgot my password, how can I reset it?",
+    "answer": "To reset your password, navigate to the login page and click the 'Forgot Password' link. You will be prompted to enter your registered email address, and we will send you a password reset link. Follow the instructions in the email to set a new secure password for your account.",
+    "tags": [
+      "password",
+      "reset",
+      "account"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-6",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "What should I do if I suspect suspicious activity on my account?",
+    "answer": "If you notice any unusual transactions or login attempts, please contact our support team immediately. We will investigate the activity and take necessary steps to secure your account. Reporting suspicious behavior promptly is crucial for maintaining your account's integrity.",
+    "tags": [
+      "security",
+      "suspicious-activity",
+      "account"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-7",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "Is my personal information safe with Javva?",
+    "answer": "Javva employs robust security measures to protect your personal and financial information. We use encryption technologies and comply with strict data protection regulations. Our commitment to security ensures your data is handled with the utmost care and confidentiality.",
+    "tags": [
+      "security",
+      "privacy",
+      "data"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-8",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "Are there any specific security requirements for using MetaTrader 4/5?",
+    "answer": "While MetaTrader 4 and 5 are secure platforms, you should always use strong, unique passwords for your trading accounts and enable two-factor authentication if available. Avoid sharing your login credentials with anyone and regularly monitor your account activity for any anomalies.",
+    "tags": [
+      "security",
+      "metatrader",
+      "mt5"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-9",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "What happens if my verification documents expire?",
+    "answer": "If your submitted identification documents expire, you will be required to provide updated, valid documents. We will notify you via email if your verification status is affected by expired documents. Maintaining up-to-date verification ensures uninterrupted access to your trading services.",
+    "tags": [
+      "verification",
+      "documents",
+      "kyc"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-10",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "How can I ensure my trading account remains secure?",
+    "answer": "To keep your account secure, use a strong, complex password that you don't use elsewhere, and enable two-factor authentication. Be cautious of phishing attempts and never share your login details. Regularly review your account statements and trading history for any discrepancies.",
+    "tags": [
+      "security",
+      "account",
+      "password"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-11",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "What if I lose my phone with the authenticator app for 2FA?",
+    "answer": "If you lose your device with the authenticator app, you'll need to use your backup codes or recovery options provided during the 2FA setup. If you didn't save these, contact our support team immediately. We have procedures in place to help you regain access securely.",
+    "tags": [
+      "2fa",
+      "security",
+      "authentication"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-12",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "Does Javva share my personal information with third parties?",
+    "answer": "Javva adheres to strict privacy policies and will not share your personal information with third parties without your explicit consent, except where required by law or for regulatory compliance. Our privacy policy details how your data is handled and protected.",
+    "tags": [
+      "privacy",
+      "data",
+      "security"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-13",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "What measures does Javva take against unauthorized trading activity?",
+    "answer": "We employ advanced security protocols, including monitoring for unusual trading patterns and login locations. In case of suspected unauthorized activity, we may temporarily restrict account access and contact you for verification. Our systems are designed to detect and prevent fraudulent actions proactively.",
+    "tags": [
+      "security",
+      "trading",
+      "fraud"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-14",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "Can I use a digital copy or photo of my ID for verification?",
+    "answer": "Yes, clear, high-resolution digital copies or photos of your identification documents are acceptable. Ensure that all details, including your photo, name, date of birth, and document expiry date, are clearly visible and legible. Blurry or cropped images may lead to delays in verification.",
+    "tags": [
+      "verification",
+      "documents",
+      "id"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-15",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "How do I update my registered email address for security notifications?",
+    "answer": "You can update your registered email address in your account profile settings. Navigate to 'Profile' or 'Account Settings' and look for the option to change your email. You may need to verify the new email address before it becomes active.",
+    "tags": [
+      "account",
+      "email",
+      "security"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-16",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "What are Javva's compliance obligations regarding KYC?",
+    "answer": "Javva complies with Anti-Money Laundering (AML) and Counter-Terrorist Financing (CTF) regulations mandated by financial authorities. KYC procedures are a core part of these obligations, ensuring we operate within legal frameworks and contribute to a secure financial system.",
+    "tags": [
+      "compliance",
+      "kyc",
+      "regulation"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-17",
+    "category": "kyc_security",
+    "language": "en",
+    "question": "Is it possible to trade without completing the KYC process?",
+    "answer": "To ensure regulatory compliance and account security, completing the KYC verification process is mandatory before you can commence trading. This allows us to comply with financial regulations and protect both you and the platform from illicit activities.",
+    "tags": [
+      "kyc",
+      "trading",
+      "verification"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-18",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Mengapa Javva meminta dokumen identitas saya?",
+    "answer": "Javva mewajibkan verifikasi identitas (KYC) sesuai dengan peraturan keuangan global. Ini membantu kami mencegah penipuan, pencucian uang, dan memastikan hanya Anda yang dapat mengakses akun Anda. Dokumen yang diperlukan biasanya KTP atau paspor yang masih berlaku.",
+    "tags": [
+      "kyc",
+      "verification",
+      "documents"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-19",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Dokumen apa saja yang perlu saya kirimkan untuk proses KYC?",
+    "answer": "Anda perlu mengunggah salinan berwarna KTP (Kartu Tanda Penduduk) atau paspor yang masih berlaku. Pastikan semua detail terlihat jelas, tidak terpotong, dan foto Anda dikenali. Dokumen ini digunakan untuk memverifikasi identitas asli Anda.",
+    "tags": [
+      "kyc",
+      "documents",
+      "id"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-20",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Berapa lama proses verifikasi KYC biasanya memakan waktu?",
+    "answer": "Proses verifikasi KYC kami biasanya selesai dalam 1-2 hari kerja setelah semua dokumen yang diperlukan diterima. Tim kami akan meninjau dokumen Anda dengan cermat untuk memastikan semuanya sesuai. Anda akan menerima notifikasi melalui email setelah akun Anda terverifikasi.",
+    "tags": [
+      "kyc",
+      "verification",
+      "time"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-21",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Apa itu otentikasi dua faktor (2FA) dan bagaimana cara mengaktifkannya?",
+    "answer": "Otentikasi dua faktor (2FA) menambahkan lapisan keamanan ekstra untuk akun Anda, membutuhkan kode dari aplikasi autentikator selain kata sandi Anda. Anda dapat mengaktifkannya di pengaturan keamanan akun Anda setelah login. Kami sangat merekomendasikan untuk mengaktifkan fitur ini demi keamanan maksimal.",
+    "tags": [
+      "security",
+      "2fa",
+      "authentication"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-22",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Bagaimana saya bisa memastikan akun trading saya aman dari peretasan?",
+    "answer": "Untuk menjaga keamanan akun, gunakan kata sandi yang kuat dan unik, aktifkan otentikasi dua faktor (2FA), dan jangan pernah membagikan detail login Anda. Selalu logout dari akun Anda saat selesai bertransaksi, terutama di perangkat publik. Waspadai upaya phishing yang mencoba mencuri informasi Anda.",
+    "tags": [
+      "security",
+      "hacking",
+      "prevention"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-23",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Saya lupa kata sandi saya, bagaimana cara mengatur ulang?",
+    "answer": "Jika Anda lupa kata sandi, klik tautan 'Lupa Kata Sandi' di halaman login. Anda akan diminta memasukkan alamat email terdaftar Anda untuk menerima instruksi pengaturan ulang. Ikuti langkah-langkah dalam email tersebut untuk membuat kata sandi baru yang aman.",
+    "tags": [
+      "password",
+      "reset",
+      "account"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-24",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Apa yang harus saya lakukan jika saya melihat aktivitas mencurigakan di akun saya?",
+    "answer": "Segera laporkan aktivitas mencurigakan apa pun kepada tim dukungan pelanggan kami melalui email atau live chat. Jangan melakukan transaksi lebih lanjut dan ubah kata sandi Anda segera. Kami akan segera menyelidiki laporan Anda untuk mengamankan akun Anda.",
+    "tags": [
+      "suspicious",
+      "activity",
+      "account"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-25",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Apakah Javva mematuhi peraturan keuangan internasional?",
+    "answer": "Ya, Javva beroperasi sesuai dengan standar kepatuhan peraturan internasional yang ketat. Kami berkomitmen untuk menjaga integritas pasar dan melindungi dana klien kami. Kepatuhan ini memastikan lingkungan trading yang aman dan terpercaya bagi semua pengguna.",
+    "tags": [
+      "regulation",
+      "compliance",
+      "security"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-26",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Mengapa verifikasi email diperlukan saat mendaftar?",
+    "answer": "Verifikasi email memastikan bahwa Anda memiliki akses ke alamat email yang Anda berikan dan digunakan sebagai metode komunikasi utama. Ini juga merupakan langkah keamanan awal untuk mencegah pendaftaran palsu. Tanpa verifikasi, Anda mungkin tidak dapat mengatur ulang kata sandi atau menerima notifikasi penting.",
+    "tags": [
+      "verification",
+      "email",
+      "account"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-27",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Apakah Javva menggunakan enkripsi untuk melindungi data pribadi saya?",
+    "answer": "Tentu, Javva menggunakan teknologi enkripsi canggih untuk melindungi semua data pribadi dan finansial Anda. Informasi Anda disimpan dengan aman dan hanya dapat diakses oleh personel yang berwenang. Kami memprioritaskan privasi dan keamanan data Anda.",
+    "tags": [
+      "security",
+      "encryption",
+      "data"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-28",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Bisakah orang lain mengakses akun saya jika mereka mendapatkan kata sandi saya?",
+    "answer": "Jika seseorang mendapatkan kata sandi Anda, mereka berpotensi mengakses akun Anda. Inilah mengapa kami sangat menyarankan penggunaan kata sandi yang kuat dan mengaktifkan otentikasi dua faktor (2FA). 2FA akan meminta kode tambahan yang hanya Anda miliki, bahkan jika kata sandi Anda bocor.",
+    "tags": [
+      "security",
+      "password",
+      "2fa"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-29",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Bagaimana cara melaporkan email atau pesan yang mencurigakan yang mengaku dari Javva?",
+    "answer": "Jika Anda menerima email atau pesan yang mencurigakan, jangan klik tautan apa pun atau memberikan informasi pribadi. Teruskan email tersebut ke alamat email dukungan resmi kami dan laporkan aktivitasnya. Kami akan menyelidiki dan memberitahu Anda jika itu adalah upaya phishing.",
+    "tags": [
+      "phishing",
+      "security",
+      "email"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-30",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Apakah ada batasan geografis untuk pendaftaran akun?",
+    "answer": "Ya, kami mematuhi peraturan internasional yang membatasi layanan kami di yurisdiksi tertentu. Saat mendaftar, Anda akan diminta untuk memilih negara tempat tinggal Anda. Jika negara Anda tidak tercantum, kami mungkin tidak dapat menawarkan layanan kami di sana karena alasan regulasi.",
+    "tags": [
+      "regulation",
+      "account",
+      "geography"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-31",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Apa yang terjadi jika saya tidak menyelesaikan proses KYC?",
+    "answer": "Jika proses KYC tidak dilengkapi, Anda mungkin akan menghadapi batasan pada fungsionalitas akun Anda, seperti penarikan dana atau pembukaan posisi baru. Kami akan menghubungi Anda untuk mengingatkan Anda tentang dokumen yang masih kurang. Menyelesaikan KYC sangat penting untuk pengalaman trading penuh.",
+    "tags": [
+      "kyc",
+      "account",
+      "limits"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-32",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Seberapa sering saya harus mengganti kata sandi akun saya?",
+    "answer": "Meskipun tidak ada aturan ketat, kami menyarankan untuk mengganti kata sandi Anda setiap 3-6 bulan sekali sebagai praktik keamanan yang baik. Pastikan kata sandi baru Anda unik dan tidak digunakan di situs web lain. Mengganti kata sandi secara berkala mengurangi risiko akses tidak sah.",
+    "tags": [
+      "password",
+      "security",
+      "best-practice"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-33",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Apakah Javva pernah meminta kata sandi saya melalui email?",
+    "answer": "Tidak, Javva tidak akan pernah meminta kata sandi Anda melalui email atau telepon. Tim dukungan kami hanya akan meminta Anda untuk masuk ke akun Anda melalui platform kami jika diperlukan verifikasi. Waspadalah terhadap permintaan semacam itu karena kemungkinan besar adalah penipuan (phishing).",
+    "tags": [
+      "phishing",
+      "security",
+      "password"
+    ]
+  },
+  {
+    "id": "faq-kyc_security-34",
+    "category": "kyc_security",
+    "language": "id",
+    "question": "Bagaimana cara melaporkan penyalahgunaan akun oleh pihak lain?",
+    "answer": "Jika Anda mencurigai atau mengetahui akun Anda disalahgunakan oleh pihak lain, segera hubungi tim dukungan kami dengan detail selengkapnya. Kami akan segera menangguhkan akun tersebut sambil melakukan investigasi. Laporkan segera untuk mencegah kerugian lebih lanjut.",
+    "tags": [
+      "abuse",
+      "account",
+      "reporting"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-1",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "What is the difference between a market order and a limit order?",
+    "answer": "A market order is executed immediately at the best available price. A limit order, on the other hand, is only executed at your specified price or better. For example, if you want to buy EUR/USD at 1.1000, a limit order will only fill if the price reaches 1.1000 or lower. Market orders are good for quick entries, while limit orders offer price control.",
+    "tags": [
+      "orders",
+      "execution",
+      "pricing"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-2",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "How do I set a stop-loss to limit my potential losses?",
+    "answer": "A stop-loss is an order placed to close a trade at a specific price, thus limiting your loss. You can set it when you open a trade or modify an existing one through your MetaTrader platform. For instance, if you buy EUR/USD at 1.1050, you might set a stop-loss at 1.1000 to cap your loss at 50 pips. It's a crucial risk management tool.",
+    "tags": [
+      "risk-management",
+      "orders",
+      "stop-loss"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-3",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "Can you explain what a take-profit order is and how it works?",
+    "answer": "A take-profit order is an instruction to close a trade automatically when it reaches a certain profit level. Similar to a stop-loss, you can set this when opening a trade or add it later. If you buy EUR/USD at 1.1050 and set a take-profit at 1.1100, the trade will close automatically once the price hits 1.1100, securing your gains. It helps lock in profits without constant monitoring.",
+    "tags": [
+      "profit",
+      "orders",
+      "automation"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-4",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "What causes slippage in forex trading, and how can it affect my trades?",
+    "answer": "Slippage occurs when your order is executed at a different price than you requested, usually during periods of high volatility or news events. This can happen with market orders, where the price may move between the time you place the order and when it's filled. Slippage can result in a worse execution price (negative slippage) or sometimes a better one (positive slippage).",
+    "tags": [
+      "execution",
+      "volatility",
+      "orders"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-5",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "What is a requote, and why might I receive one?",
+    "answer": "A requote happens when the broker cannot fill your order at the exact price you requested because the market price has moved. They will then offer you a new price to confirm. Requotes are more common in fast-moving markets or with certain order types. You have the option to accept or reject the new price.",
+    "tags": [
+      "execution",
+      "pricing",
+      "volatility"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-6",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "What does a partial fill mean for my order?",
+    "answer": "A partial fill means that only a portion of your requested order size was executed at the specified price. This typically occurs in markets with lower liquidity, where not enough volume is available to match your entire order. For example, if you try to buy 50 lots but only 20 lots are available at your price, you might get a partial fill for 20 lots and the remaining 30 lots might be canceled or requoted.",
+    "tags": [
+      "execution",
+      "liquidity",
+      "orders"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-7",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "Is it possible to hedge my open positions on Javva?",
+    "answer": "Yes, hedging is permitted on Javva's platform. Hedging involves opening an opposite position in the same instrument to offset potential losses on an existing trade. For instance, if you are long EUR/USD and the market moves against you, you could open a short EUR/USD position to lock in the current price. However, be mindful of margin requirements and potential costs associated with holding hedged positions.",
+    "tags": [
+      "hedging",
+      "strategies",
+      "risk-management"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-8",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "What are the rules for scalping on your platform?",
+    "answer": "Scalping involves making numerous small trades to capture tiny profits, often within seconds or minutes. On Javva, scalping is allowed, but it's important to be aware of spread costs and potential requotes due to the high frequency of trades. Ensure your stop-losses are set appropriately to manage risk on these short-term trades. Effective scalping requires a stable internet connection and quick execution.",
+    "tags": [
+      "scalping",
+      "strategies",
+      "execution"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-9",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "How long do pending orders like limit and stop orders remain active?",
+    "answer": "Pending orders, such as limit and stop orders, remain active until they are either executed or canceled. By default, they are set to 'Good 'til Canceled' (GTC) on MetaTrader. You can also choose specific expiration dates for your pending orders if you wish to limit how long they stay open.",
+    "tags": [
+      "orders",
+      "pending",
+      "duration"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-10",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "What is the minimum stop-loss distance I need to maintain for EUR/USD?",
+    "answer": "The minimum stop-loss distance is typically defined by the broker and can vary per instrument. For EUR/USD on Javva, the minimum distance is usually 10 pips. Placing a stop-loss closer than this will result in an error message in your MetaTrader platform. This ensures a reasonable buffer for normal market fluctuations.",
+    "tags": [
+      "stop-loss",
+      "currency-pairs",
+      "rules"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-11",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "Can I modify a stop-loss or take-profit once a trade is open?",
+    "answer": "Absolutely. You can adjust your stop-loss and take-profit levels at any time after a trade has been opened, provided the market is not exceptionally volatile. Simply right-click on the open position in your MetaTrader terminal, select 'Modify Order', and then set your desired new levels. This allows for dynamic risk and profit management.",
+    "tags": [
+      "stop-loss",
+      "take-profit",
+      "management"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-12",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "What is the difference between a stop order and a stop-limit order?",
+    "answer": "A stop order becomes a market order once the stop price is reached and is executed at the next available price. A stop-limit order, however, becomes a limit order once the stop price is reached. This means it will only execute at the limit price or better, offering more control but also the risk of not filling if the price moves too quickly past your limit.",
+    "tags": [
+      "orders",
+      "stop-limit",
+      "execution"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-13",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "How does leverage affect my trade execution and order management?",
+    "answer": "Leverage, such as the 100:1 offered by Javva, magnifies your trading power but does not directly alter how your orders are executed or managed. It primarily impacts your margin requirements and the potential size of your positions. Higher leverage means less margin is required per trade, but it also amplifies both profits and losses, making strict risk management with stop-losses even more critical.",
+    "tags": [
+      "leverage",
+      "risk-management",
+      "execution"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-14",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "What happens to my pending orders if the market gaps overnight?",
+    "answer": "If a significant price gap occurs overnight, your pending orders might be affected. A pending buy limit or sell limit order might be filled at a price significantly different from your set level if the gap moves past it. A pending stop order could be triggered by the gap and then executed as a market order at the next available price, potentially leading to slippage.",
+    "tags": [
+      "pending-orders",
+      "gaps",
+      "execution"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-15",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "Are there any restrictions on placing orders during major news events?",
+    "answer": "While Javva allows trading during news events, be aware that volatility increases dramatically, leading to wider spreads, potential slippage, and requotes. It's advisable to set wider stop-loss and take-profit levels or avoid placing new market orders precisely during the announcement to mitigate risk. Pending orders might still execute but at potentially unfavorable prices.",
+    "tags": [
+      "news-trading",
+      "volatility",
+      "orders"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-16",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "What is the typical spread for EUR/USD, and how does it impact my entry price?",
+    "answer": "The typical spread for EUR/USD on Javva can range from 0.5 to 1.5 pips, depending on market conditions. This spread represents the cost of trading. When you place a buy order, you enter at the ask price, which is slightly higher than the mid-price. Conversely, a sell order enters at the bid price, slightly lower. The spread is effectively deducted from your potential profit.",
+    "tags": [
+      "spread",
+      "currency-pairs",
+      "pricing"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-17",
+    "category": "trading_mechanics",
+    "language": "en",
+    "question": "How do I manage multiple open positions simultaneously in MetaTrader?",
+    "answer": "In MetaTrader 4 and 5, you can manage multiple open positions through the 'Trade' tab in your Terminal window. You can see all your open trades, their profit/loss, and modify stop-loss/take-profit levels for each individually. Closing individual trades is done by clicking the 'X' next to them, or you can close all positions at once using the 'Close All' function, though this requires careful consideration.",
+    "tags": [
+      "management",
+      "mt4",
+      "mt5"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-18",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Bagaimana cara saya membuka posisi trading di Javva?",
+    "answer": "Untuk membuka posisi, Anda perlu memilih instrumen yang diinginkan, menentukan volume trading (jumlah lot), dan memilih jenis order. Di platform MetaTrader 4 atau 5, Anda bisa klik 'New Order' atau klik kanan pada instrumen di Market Watch. Pastikan Anda memahami apakah Anda ingin masuk di harga pasar saat ini (Market Order) atau menunggu harga tertentu (Pending Order).",
+    "tags": [
+      "trading",
+      "order",
+      "position"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-19",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Apa perbedaan antara Market Order dan Pending Order?",
+    "answer": "Market Order dieksekusi segera pada harga terbaik yang tersedia di pasar saat itu juga. Sebaliknya, Pending Order memungkinkan Anda untuk menetapkan kondisi harga tertentu sebelum posisi dibuka. Ada empat jenis Pending Order di MT4/MT5: Buy Limit, Sell Limit, Buy Stop, dan Sell Stop, yang masing-masing memiliki fungsi berbeda.",
+    "tags": [
+      "order",
+      "market",
+      "pending"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-20",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Kapan sebaiknya saya menggunakan Stop Loss?",
+    "answer": "Stop Loss sangat penting untuk membatasi potensi kerugian Anda jika pasar bergerak berlawanan dengan posisi Anda. Anda sebaiknya mengaturnya segera setelah membuka posisi trading. Misalnya, jika Anda membeli EUR/USD, Anda akan menetapkan Stop Loss di bawah harga masuk untuk membatasi kerugian jika EUR/USD turun.",
+    "tags": [
+      "risk-management",
+      "stop-loss",
+      "trade"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-21",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Apa fungsi Take Profit dan bagaimana cara menggunakannya?",
+    "answer": "Take Profit adalah level harga di mana Anda ingin mengunci keuntungan Anda secara otomatis. Sama seperti Stop Loss, Anda bisa menetapkannya saat membuka posisi atau memodifikasinya nanti. Jika harga mencapai level Take Profit Anda, platform akan menutup posisi tersebut dan mengamankan keuntungan Anda.",
+    "tags": [
+      "profit",
+      "take-profit",
+      "trade"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-22",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Apa itu Slippage dan kapan biasanya terjadi?",
+    "answer": "Slippage adalah perbedaan antara harga yang Anda harapkan saat melakukan order dan harga eksekusi aktual. Ini paling sering terjadi selama periode volatilitas pasar yang tinggi, seperti saat rilis berita ekonomi penting atau ketika ada perubahan pasar yang mendadak. Slippage bisa positif (eksekusi lebih baik dari yang diharapkan) atau negatif.",
+    "tags": [
+      "slippage",
+      "execution",
+      "market"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-23",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Apa yang dimaksud dengan Requote?",
+    "answer": "Requote terjadi ketika broker tidak dapat mengeksekusi order Anda pada harga yang Anda minta karena harga pasar telah berubah sangat cepat. Broker kemudian akan menawarkan harga baru kepada Anda, dan Anda memiliki pilihan untuk menerima atau menolak. Requote lebih umum terjadi pada kondisi pasar yang sangat fluktuatif.",
+    "tags": [
+      "requote",
+      "execution",
+      "price"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-24",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Bagaimana jika sebagian dari order saya dieksekusi (Partial Fill)?",
+    "answer": "Partial Fill berarti hanya sebagian dari volume order Anda yang berhasil dieksekusi pada harga yang diminta. Sisa dari order Anda mungkin dieksekusi pada harga lain atau dibatalkan, tergantung pada kondisi pasar dan kebijakan broker. Ini bisa terjadi ketika likuiditas pasar rendah untuk volume trading yang Anda inginkan.",
+    "tags": [
+      "execution",
+      "fill",
+      "order"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-25",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Apakah Javva memperbolehkan strategi Hedging?",
+    "answer": "Ya, Javva memperbolehkan strategi hedging di platform MetaTrader 4 dan 5. Hedging adalah praktik membuka posisi yang berlawanan arah pada instrumen yang sama untuk melindungi dari kerugian. Misalnya, Anda bisa membeli EUR/USD dan juga menjual EUR/USD pada saat yang sama.",
+    "tags": [
+      "hedging",
+      "strategy",
+      "mt4"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-26",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Bisakah saya melakukan Scalping di Javva?",
+    "answer": "Tentu, Anda bisa melakukan scalping di Javva. Scalping adalah strategi trading jangka pendek yang bertujuan untuk mendapatkan keuntungan dari pergerakan harga kecil. Pastikan Anda memahami spread yang berlaku dan kecepatan eksekusi order untuk memaksimalkan potensi scalping Anda.",
+    "tags": [
+      "scalping",
+      "strategy",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-27",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Berapa lama Pending Order saya akan aktif sebelum kedaluwarsa?",
+    "answer": "Jangka waktu kedaluwarsa untuk Pending Order bervariasi tergantung pada pengaturan Anda saat membuat order. Di MT4/MT5, Anda bisa menetapkan tanggal dan waktu kedaluwarsa spesifik (Good 'Til Cancelled - GTC, atau Good 'Til Date - GTD). Jika tidak ada tanggal yang ditetapkan, order akan tetap aktif sampai Anda membatalkannya atau dieksekusi.",
+    "tags": [
+      "pending-order",
+      "expiration",
+      "trade"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-28",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Bagaimana cara memodifikasi Stop Loss atau Take Profit pada posisi yang sudah terbuka?",
+    "answer": "Anda dapat memodifikasi level Stop Loss dan Take Profit kapan saja selama pasar terbuka. Caranya, buka tab 'Trade' di Terminal window MT4/MT5, klik kanan pada posisi Anda, pilih 'Modify Order', lalu masukkan level SL/TP baru Anda. Perubahan ini akan segera aktif setelah dikonfirmasi.",
+    "tags": [
+      "stop-loss",
+      "take-profit",
+      "modify"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-29",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Apa yang terjadi jika harga menyentuh Stop Loss saya saat pasar tutup?",
+    "answer": "Jika harga pasar menyentuh level Stop Loss Anda saat pasar ditutup (misalnya di akhir pekan), eksekusi akan terjadi pada harga pembukaan pasar berikutnya. Ini bisa berarti posisi Anda ditutup pada harga yang sedikit berbeda dari yang Anda tetapkan karena adanya gap di harga.",
+    "tags": [
+      "stop-loss",
+      "gapping",
+      "market-close"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-30",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Bagaimana cara menentukan ukuran posisi (lot size) yang tepat?",
+    "answer": "Ukuran posisi harus dihitung berdasarkan toleransi risiko Anda per trade dan jarak Stop Loss Anda. Gunakan kalkulator margin atau pahami perhitungan lot yang didasarkan pada nilai pip per lot untuk instrumen yang Anda tradingkan. Ini membantu mengelola risiko Anda agar tidak melebihi batas yang ditentukan.",
+    "tags": [
+      "position-sizing",
+      "risk-management",
+      "lot-size"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-31",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Apakah ada batasan pada jumlah order yang bisa saya buka sekaligus?",
+    "answer": "Javva umumnya tidak membatasi jumlah maksimum order yang bisa Anda buka secara bersamaan, selama Anda memiliki margin yang cukup untuk mendukung semua posisi tersebut. Namun, pastikan Anda selalu memantau margin level Anda untuk menghindari Margin Call atau Stop Out.",
+    "tags": [
+      "order-limit",
+      "margin",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-32",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Apa itu 'Market Execution' dan 'Instant Execution' di MT4/MT5?",
+    "answer": "Market Execution berarti order Anda akan dieksekusi pada harga pasar yang tersedia saat itu, yang mungkin sedikit berbeda dari harga yang Anda lihat (slippage). Instant Execution (hanya di MT4, tidak umum di MT5) mencoba mengeksekusi pada harga yang Anda minta, namun bisa menghasilkan Requote jika harga berubah sebelum eksekusi.",
+    "tags": [
+      "execution",
+      "market",
+      "instant"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-33",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Bagaimana cara menghitung potensi keuntungan atau kerugian sebelum membuka posisi?",
+    "answer": "Anda dapat menghitungnya dengan mengetahui nilai pip untuk instrumen yang Anda tradingkan, ukuran posisi Anda (lot), dan jarak antara harga masuk Anda dengan level Stop Loss atau Take Profit Anda. Misalnya, untuk EUR/USD, 1 pip biasanya bernilai $10 per lot standar (100,000 unit) dengan spread tipikal 0.5 pips.",
+    "tags": [
+      "profit-loss",
+      "calculation",
+      "pips"
+    ]
+  },
+  {
+    "id": "faq-trading_mechanics-34",
+    "category": "trading_mechanics",
+    "language": "id",
+    "question": "Apakah ada aturan khusus untuk scalping pada pasangan mata uang tertentu?",
+    "answer": "Meskipun scalping bisa dilakukan pada banyak pasangan mata uang, pasangan mayor seperti EUR/USD atau GBP/USD seringkali lebih disukai karena likuiditasnya yang tinggi dan spread yang lebih ketat. Hindari melakukan scalping saat berita besar dirilis karena volatilitas dan slippage bisa sangat tinggi.",
+    "tags": [
+      "scalping",
+      "currency-pairs",
+      "strategy"
+    ]
+  },
+  {
+    "id": "faq-platform_features-1",
+    "category": "platform_features",
+    "language": "en",
+    "question": "What trading platforms does Javva offer?",
+    "answer": "Javva provides access to two of the most popular trading platforms: MetaTrader 4 (MT4) and MetaTrader 5 (MT5). You can also trade directly through our convenient web terminal or via our dedicated mobile app for iOS and Android devices. This ensures you can trade anytime, anywhere, on your preferred device.",
+    "tags": [
+      "platform",
+      "metatrader",
+      "access"
+    ]
+  },
+  {
+    "id": "faq-platform_features-2",
+    "category": "platform_features",
+    "language": "en",
+    "question": "Can I trade on my phone with Javva?",
+    "answer": "Absolutely! Javva offers a fully-featured mobile trading app compatible with both iOS and Android devices. Download it from your app store to access real-time quotes, charts, and execute trades on the go. Manage your account efficiently, even when you're away from your computer.",
+    "tags": [
+      "mobile",
+      "app",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-platform_features-3",
+    "category": "platform_features",
+    "language": "en",
+    "question": "What is the Javva web terminal?",
+    "answer": "The Javva web terminal is an instant-access trading platform that runs directly in your web browser, no download required. It offers a seamless trading experience with access to charts, indicators, and order execution. Perfect for those who prefer to trade without installing software or need to access their account from multiple devices.",
+    "tags": [
+      "web",
+      "terminal",
+      "browser"
+    ]
+  },
+  {
+    "id": "faq-platform_features-4",
+    "category": "platform_features",
+    "language": "en",
+    "question": "How advanced are the charting tools on Javva's platforms?",
+    "answer": "Both MetaTrader 4 and MetaTrader 5 offer sophisticated charting capabilities. You'll find a wide array of built-in technical indicators, drawing tools, and multiple chart types (line, bar, candlestick). Customize your charts to analyze market trends and identify trading opportunities with precision.",
+    "tags": [
+      "charts",
+      "indicators",
+      "analysis"
+    ]
+  },
+  {
+    "id": "faq-platform_features-5",
+    "category": "platform_features",
+    "language": "en",
+    "question": "Can I use automated trading strategies (EAs) with Javva?",
+    "answer": "Yes, Javva fully supports the use of Expert Advisors (EAs) on both MetaTrader 4 and MetaTrader 5. You can develop, test, and deploy your own automated trading systems. Leverage the power of algorithms to execute trades based on your predefined strategies 24/7.",
+    "tags": [
+      "ea",
+      "automated",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-platform_features-6",
+    "category": "platform_features",
+    "language": "en",
+    "question": "What is copy trading and can I do it with Javva?",
+    "answer": "Copy trading allows you to automatically replicate the trades of experienced traders. Javva integrates with popular copy trading services, enabling you to follow and subscribe to signal providers. It's a great way to learn from professionals and potentially profit from their strategies without needing to execute trades yourself.",
+    "tags": [
+      "copy",
+      "trading",
+      "signals"
+    ]
+  },
+  {
+    "id": "faq-platform_features-7",
+    "category": "platform_features",
+    "language": "en",
+    "question": "How do I find trading signals on Javva?",
+    "answer": "Javva provides access to a marketplace for trading signals directly within the MetaTrader platforms. You can browse, subscribe to, and follow signals from various traders. This feature allows you to observe profitable strategies and consider following them to enhance your trading approach.",
+    "tags": [
+      "signals",
+      "mt4",
+      "mt5"
+    ]
+  },
+  {
+    "id": "faq-platform_features-8",
+    "category": "platform_features",
+    "language": "en",
+    "question": "Do I need a Virtual Private Server (VPS) for my trading?",
+    "answer": "A VPS is recommended for traders using Expert Advisors (EAs) or requiring constant online access. It hosts your trading platform on a remote server, ensuring uninterrupted operation even if your local internet connection or computer fails. Javva offers guidance on setting up and connecting to a VPS for optimal performance.",
+    "tags": [
+      "vps",
+      "automated",
+      "performance"
+    ]
+  },
+  {
+    "id": "faq-platform_features-9",
+    "category": "platform_features",
+    "language": "en",
+    "question": "Is MetaTrader 4 or 5 better for beginners?",
+    "answer": "Both MT4 and MT5 are powerful platforms, but MT5 offers more asset classes and advanced features, making it a strong choice for those looking to trade a wider range of markets. MT4 is often considered simpler for absolute beginners focusing solely on forex. Javva supports both, allowing you to choose based on your trading focus.",
+    "tags": [
+      "metatrader5",
+      "beginner",
+      "platform"
+    ]
+  },
+  {
+    "id": "faq-platform_features-10",
+    "category": "platform_features",
+    "language": "en",
+    "question": "How many indicators can I use on a chart?",
+    "answer": "On both MetaTrader 4 and MetaTrader 5, you can typically apply up to 9 or 10 indicators simultaneously on a single chart window. Additionally, you can open multiple chart windows, each with its own set of indicators. This flexibility allows for comprehensive market analysis.",
+    "tags": [
+      "indicators",
+      "charts",
+      "analysis"
+    ]
+  },
+  {
+    "id": "faq-platform_features-11",
+    "category": "platform_features",
+    "language": "en",
+    "question": "What is the difference between MT4 and MT5?",
+    "answer": "MetaTrader 5 (MT5) is a more advanced platform than MT4, offering more built-in indicators, timeframes, and asset classes (like stocks and futures). MT5 also features a more robust economic calendar and improved order execution. While MT4 is primarily for forex, MT5 is designed for a broader range of financial markets.",
+    "tags": [
+      "mt4",
+      "mt5",
+      "difference"
+    ]
+  },
+  {
+    "id": "faq-platform_features-12",
+    "category": "platform_features",
+    "language": "en",
+    "question": "Can I customize the trading interface?",
+    "answer": "Yes, both MetaTrader 4 and MetaTrader 5 platforms are highly customizable. You can adjust the layout, colors, and arrange windows to suit your preferences. This allows you to create a trading environment that is both comfortable and efficient for your workflow.",
+    "tags": [
+      "customization",
+      "interface",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-platform_features-13",
+    "category": "platform_features",
+    "language": "en",
+    "question": "Does Javva offer news feeds within the platform?",
+    "answer": "Javva integrates real-time news feeds directly into the MetaTrader platforms. You can stay updated on market-moving events without needing to switch applications. Accessing financial news within your trading environment helps you make more informed decisions.",
+    "tags": [
+      "news",
+      "feeds",
+      "platform"
+    ]
+  },
+  {
+    "id": "faq-platform_features-14",
+    "category": "platform_features",
+    "language": "en",
+    "question": "What types of orders can I place?",
+    "answer": "Javva's platforms support a wide range of order types, including market orders, limit orders, stop orders, and stop-limit orders. This allows for precise control over your entry and exit points. You can implement various trading strategies effectively with these options.",
+    "tags": [
+      "orders",
+      "trading",
+      "execution"
+    ]
+  },
+  {
+    "id": "faq-platform_features-15",
+    "category": "platform_features",
+    "language": "en",
+    "question": "How do I access historical data for backtesting?",
+    "answer": "Both MetaTrader 4 and MetaTrader 5 provide access to historical price data, which can be downloaded directly through the platform. This data is crucial for backtesting your trading strategies and Expert Advisors. You can ensure your strategies are robust before risking real capital.",
+    "tags": [
+      "backtesting",
+      "historical",
+      "data"
+    ]
+  },
+  {
+    "id": "faq-platform_features-16",
+    "category": "platform_features",
+    "language": "en",
+    "question": "Can I trade cryptocurrencies on Javva's platforms?",
+    "answer": "Yes, Javva offers the ability to trade a selection of popular cryptocurrencies through our MetaTrader 5 platform. MT5 is equipped to handle a wider range of asset classes, including digital currencies. Check our 'Markets' page for the full list of available crypto CFDs.",
+    "tags": [
+      "cryptocurrency",
+      "mt5",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-platform_features-17",
+    "category": "platform_features",
+    "language": "en",
+    "question": "Is there a demo account available to practice?",
+    "answer": "Absolutely! Javva offers free demo accounts for both MetaTrader 4 and MetaTrader 5. This allows you to familiarize yourself with the platforms, test trading strategies, and practice order execution in a risk-free environment. Demo accounts use virtual funds, so you can learn without financial commitment.",
+    "tags": [
+      "demo",
+      "practice",
+      "account"
+    ]
+  },
+  {
+    "id": "faq-platform_features-18",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Apakah Javva hanya menyediakan MetaTrader 4 atau juga MetaTrader 5?",
+    "answer": "Javva menyediakan akses ke kedua platform trading terkemuka, yaitu MetaTrader 4 (MT4) dan MetaTrader 5 (MT5). Anda dapat memilih platform yang paling sesuai dengan gaya trading Anda, baik yang terbiasa dengan MT4 maupun yang ingin memanfaatkan fitur canggih di MT5.",
+    "tags": [
+      "platform",
+      "metatrader",
+      "access"
+    ]
+  },
+  {
+    "id": "faq-platform_features-19",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Bagaimana cara saya mengakses platform trading Javva di perangkat seluler?",
+    "answer": "Anda dapat melakukan trading kapan saja dan di mana saja melalui aplikasi mobile Javva yang tersedia untuk iOS dan Android. Cukup unduh aplikasi Javva dari App Store atau Google Play, lalu masuk menggunakan kredensial akun trading Anda.",
+    "tags": [
+      "mobile",
+      "app",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-platform_features-20",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Apakah ada opsi trading langsung melalui browser web tanpa perlu mengunduh software?",
+    "answer": "Ya, Javva menawarkan Web Terminal yang memungkinkan Anda untuk trading langsung dari browser web apa pun tanpa perlu mengunduh atau menginstal perangkat lunak apa pun. Ini adalah solusi praktis jika Anda sering berpindah perangkat atau tidak dapat menginstal aplikasi di komputer Anda.",
+    "tags": [
+      "web",
+      "terminal",
+      "browser"
+    ]
+  },
+  {
+    "id": "faq-platform_features-21",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Fitur charting apa saja yang tersedia di platform Javva?",
+    "answer": "Platform Javva, baik MT4 maupun MT5, dilengkapi dengan grafik yang canggih dan berbagai indikator teknikal. Anda dapat menganalisis pergerakan harga instrumen seperti EUR/USD menggunakan indikator seperti Moving Average, RSI, dan MACD untuk membantu pengambilan keputusan trading.",
+    "tags": [
+      "charts",
+      "indicators",
+      "analysis"
+    ]
+  },
+  {
+    "id": "faq-platform_features-22",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Apa itu Expert Advisor (EA) dan bagaimana cara menggunakannya di Javva?",
+    "answer": "Expert Advisor (EA) adalah program otomatis yang dapat melakukan trading untuk Anda berdasarkan algoritma yang telah ditentukan. Anda dapat menginstal EA kustom Anda di platform MT4 atau MT5 Javva untuk mengeksekusi strategi trading otomatis, membantu Anda menghemat waktu dan menghilangkan emosi dari trading.",
+    "tags": [
+      "ea",
+      "automation",
+      "trading-strategy"
+    ]
+  },
+  {
+    "id": "faq-platform_features-23",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Bisakah saya menyalin trading trader lain melalui platform Javva?",
+    "answer": "Ya, Javva mendukung fitur Copy Trading yang memungkinkan Anda untuk menyalin trading dari trader berpengalaman. Anda dapat meninjau profil trader, performa historis, dan memilih siapa yang ingin Anda ikuti untuk mengeksekusi trade secara otomatis di akun Anda.",
+    "tags": [
+      "copy-trading",
+      "social-trading",
+      "signals"
+    ]
+  },
+  {
+    "id": "faq-platform_features-24",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Bagaimana cara kerja sinyal trading di Javva?",
+    "answer": "Sinyal trading adalah ide trading yang dikirimkan oleh trader lain atau layanan sinyal. Di platform Javva, Anda dapat berlangganan sinyal trading yang relevan dengan instrumen yang Anda minati, lalu memutuskan apakah akan mengeksekusi trade tersebut secara manual atau mengaturnya untuk dieksekusi secara otomatis.",
+    "tags": [
+      "signals",
+      "trading-ideas",
+      "execution"
+    ]
+  },
+  {
+    "id": "faq-platform_features-25",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Apa itu VPS dan mengapa saya membutuhkannya untuk trading dengan Javva?",
+    "answer": "VPS (Virtual Private Server) adalah server virtual yang berjalan 24/7, memungkinkan Expert Advisor (EA) Anda untuk beroperasi tanpa henti. Menggunakan VPS dengan Javva memastikan bahwa EA Anda dapat mengeksekusi trading bahkan ketika komputer Anda mati atau koneksi internet Anda terputus, meminimalkan latency.",
+    "tags": [
+      "vps",
+      "server",
+      "automation"
+    ]
+  },
+  {
+    "id": "faq-platform_features-26",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Seberapa mudah menggunakan grafik di platform Javva untuk pemula?",
+    "answer": "Grafik di platform Javva dirancang agar intuitif bahkan untuk pemula. Anda dapat dengan mudah mengubah time frame, menambahkan indikator seperti Moving Average, dan menggambar garis tren untuk menganalisis pergerakan harga pasangan mata uang seperti EUR/USD.",
+    "tags": [
+      "charts",
+      "beginner",
+      "usability"
+    ]
+  },
+  {
+    "id": "faq-platform_features-27",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Apakah saya bisa menggunakan beberapa akun trading dalam satu platform Javva?",
+    "answer": "Ya, Anda dapat mengelola beberapa akun trading Anda dalam satu instalasi platform Javva. Ini memudahkan perpindahan antar akun untuk tujuan manajemen portofolio atau pengujian strategi yang berbeda.",
+    "tags": [
+      "accounts",
+      "management",
+      "multi-account"
+    ]
+  },
+  {
+    "id": "faq-platform_features-28",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Bagaimana cara menyesuaikan indikator teknikal pada grafik di Javva?",
+    "answer": "Platform Javva memungkinkan Anda untuk menyesuaikan berbagai indikator teknikal. Anda bisa mengubah parameter seperti periode, gaya garis, dan warna untuk menyesuaikannya dengan preferensi analisis Anda atau kondisi pasar yang spesifik.",
+    "tags": [
+      "indicators",
+      "customization",
+      "technical-analysis"
+    ]
+  },
+  {
+    "id": "faq-platform_features-29",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Apakah platform Javva mendukung trading otomatis sepenuhnya?",
+    "answer": "Ya, dengan menggunakan Expert Advisors (EA) di MT4 atau MT5, Anda dapat mencapai trading otomatis penuh. EA dapat memantau pasar, mengidentifikasi peluang berdasarkan kriteria yang Anda tetapkan, dan mengeksekusi order beli atau jual tanpa intervensi manual.",
+    "tags": [
+      "automation",
+      "ea",
+      "algorithmic-trading"
+    ]
+  },
+  {
+    "id": "faq-platform_features-30",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Seberapa andal koneksi trading yang ditawarkan oleh Javva?",
+    "answer": "Javva berkomitmen untuk menyediakan koneksi trading yang andal dan cepat. Kami terhubung langsung ke likuiditas dari bank-bank tier-1, memastikan eksekusi order yang cepat dan spread yang kompetitif untuk pasangan mata uang utama.",
+    "tags": [
+      "connection",
+      "reliability",
+      "execution"
+    ]
+  },
+  {
+    "id": "faq-platform_features-31",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Apakah Javva menyediakan akses ke berita pasar real-time di platformnya?",
+    "answer": "Ya, platform MetaTrader 4 dan MetaTrader 5 yang disediakan oleh Javva biasanya terintegrasi dengan feed berita pasar real-time. Ini membantu trader tetap terinformasi tentang peristiwa ekonomi yang dapat memengaruhi pasar.",
+    "tags": [
+      "news",
+      "market-data",
+      "real-time"
+    ]
+  },
+  {
+    "id": "faq-platform_features-32",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Apa manfaat menggunakan aplikasi mobile Javva dibandingkan desktop?",
+    "answer": "Aplikasi mobile Javva menawarkan fleksibilitas dan kenyamanan untuk memantau akun dan melakukan trading saat bepergian. Anda dapat merespons pergerakan pasar dengan cepat, memeriksa posisi Anda, dan bahkan membuka atau menutup trade langsung dari smartphone Anda.",
+    "tags": [
+      "mobile-app",
+      "flexibility",
+      "convenience"
+    ]
+  },
+  {
+    "id": "faq-platform_features-33",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Seberapa cepat order saya dieksekusi di platform Javva?",
+    "answer": "Javva berupaya untuk eksekusi order secepat mungkin, seringkali dalam hitungan milidetik. Kecepatan eksekusi ini didukung oleh infrastruktur teknologi kami yang canggih dan koneksi langsung ke penyedia likuiditas.",
+    "tags": [
+      "execution-speed",
+      "latency",
+      "trading"
+    ]
+  },
+  {
+    "id": "faq-platform_features-34",
+    "category": "platform_features",
+    "language": "id",
+    "question": "Apakah platform Javva cocok untuk scalping?",
+    "answer": "Ya, platform Javva, terutama dengan spread yang kompetitif dan eksekusi cepat, cocok untuk strategi scalping. Trader dapat memanfaatkan pergerakan harga kecil, misalnya 1 pip pada EUR/USD, untuk mendapatkan keuntungan.",
+    "tags": [
+      "scalping",
+      "strategy",
+      "high-frequency"
+    ]
+  }
+]

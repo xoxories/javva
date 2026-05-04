@@ -17,5 +17,7 @@ coverage/
 .coverage
 htmlcov/
 .pytest_cache/
+*.test.json
+*.partial.json
 *.swp
 .cache/
