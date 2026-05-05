@@ -23,10 +23,14 @@ class RetrievalFilter(BaseModel):
 class RetrievedFaq(BaseModel):
     """A single FAQ result returned by retrieval.
 
-    `score` is the cosine similarity returned by Qdrant. For our
-    multilingual Gemini embeddings on related text this lands in
-    roughly [0.5, 0.85]; we don't constrain the type so unusual values
-    surface clearly rather than failing validation.
+    `score` semantics depend on which retrieval method produced this:
+      - search()        -> Qdrant cosine similarity in [0, 1] (typically 0.5–0.85)
+      - search_hybrid() -> Reciprocal Rank Fusion combined score (small, < 0.05;
+                           rank-meaningful but NOT directly comparable to cosine)
+
+    Compare scores within a single retrieval call, not across methods.
+    The type is unconstrained so unusual values surface clearly rather
+    than failing validation.
     """
 
     id: str

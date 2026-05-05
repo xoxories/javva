@@ -19,6 +19,8 @@ from qdrant_client import QdrantClient, models
 
 from app.config import settings
 from app.rag.embedder import embed_query
+from app.rag.hybrid import reciprocal_rank_fusion
+from app.rag.keyword import get_keyword_searcher
 from app.rag.schemas import RetrievalFilter, RetrievalResult, RetrievedFaq
 
 
@@ -155,6 +157,131 @@ class FaqRetriever:
             filters_applied=filters,
         )
 
+    def search_hybrid(
+        self,
+        query: str,
+        k: int = 3,
+        filters: RetrievalFilter | None = None,
+        vector_weight: float = 1.0,
+        keyword_weight: float = 1.0,
+        fetch_per_method: int = 20,
+    ) -> RetrievalResult:
+        """Hybrid search combining vector similarity and BM25 keyword matching.
+
+        Use cases where hybrid wins over pure vector:
+          - Exact terms (MT5, EUR/USD, pip)
+          - Acronyms (KYC, AML)
+          - Numeric references, codes, IDs
+
+        For pure conceptual / cross-language queries, prefer `search()`.
+
+        Args:
+            query: User's question.
+            k: Maximum results to return.
+            filters: Optional category / language / tag constraints.
+            vector_weight: Multiplier on vector contribution to RRF.
+            keyword_weight: Multiplier on keyword contribution to RRF.
+            fetch_per_method: How many top results to over-fetch from each
+                method before fusion (default 20).
+
+        Returns:
+            RetrievalResult. Each RetrievedFaq.score holds the RRF
+            combined score (rank-meaningful, not directly comparable to
+            cosine similarity from `search()`).
+
+        Raises:
+            ValueError: from `embed_query` if `query` is empty.
+            RetrievalError: if embedding or Qdrant query fails.
+        """
+        filters_dict = filters.model_dump(exclude_none=True) if filters else {}
+        log.info(
+            "retrieval_query",
+            mode="hybrid",
+            query=query[:80],
+            k=k,
+            fetch_per_method=fetch_per_method,
+            filters=filters_dict,
+        )
+
+        try:
+            query_vec = embed_query(query)
+        except ValueError:
+            raise
+        except Exception as e:
+            log.error("retrieval_embed_failed", error=str(e))
+            raise RetrievalError(f"Embedding failed: {e}") from e
+
+        qdrant_filter = self._build_qdrant_filter(filters)
+
+        try:
+            response = self.qdrant.query_points(
+                collection_name=self.collection_name,
+                query=query_vec,
+                query_filter=qdrant_filter,
+                limit=fetch_per_method,
+                with_payload=True,
+            )
+        except Exception as e:
+            log.error("retrieval_qdrant_failed", error=str(e))
+            raise RetrievalError(f"Qdrant query failed: {e}") from e
+
+        vector_raw = response.points
+        vector_results = [(int(p.id), p.score) for p in vector_raw]
+
+        ks = get_keyword_searcher()
+        keyword_results = ks.search(query, k=fetch_per_method, filters=filters)
+
+        combined = reciprocal_rank_fusion(
+            vector_results,
+            keyword_results,
+            vector_weight=vector_weight,
+            keyword_weight=keyword_weight,
+        )
+
+        # Prefer Qdrant payload (authoritative); fall back to KeywordSearcher's
+        # in-memory copy for keyword-only hits not in the vector top-N.
+        qdrant_payloads = {int(p.id): (p.payload or {}) for p in vector_raw}
+
+        results: list[RetrievedFaq] = []
+        for id_, rrf_score in combined[:k]:
+            payload = qdrant_payloads.get(id_) or ks.get_payload(id_)
+            results.append(
+                RetrievedFaq(
+                    id=payload.get("id", ""),
+                    category=payload.get("category", ""),
+                    language=payload.get("language", ""),
+                    question=payload.get("question", ""),
+                    answer=payload.get("answer", ""),
+                    tags=payload.get("tags", []),
+                    score=rrf_score,
+                )
+            )
+
+        if not results:
+            log.warning(
+                "retrieval_empty",
+                mode="hybrid",
+                query=query[:80],
+                total_found=len(combined),
+            )
+        else:
+            log.info(
+                "retrieval_result",
+                mode="hybrid",
+                total_found=len(combined),
+                returned=len(results),
+                vector_hits=len(vector_results),
+                keyword_hits=len(keyword_results),
+                top_score=results[0].score,
+            )
+
+        return RetrievalResult(
+            query=query,
+            results=results,
+            total_found=len(combined),
+            filters_applied=filters,
+        )
+
     @staticmethod
     def _build_qdrant_filter(f: RetrievalFilter | None) -> models.Filter | None:
         if f is None:
@@ -208,4 +335,21 @@ def search_faqs(
         k=k,
         filters=filters,
         score_threshold=score_threshold,
+    )
+
+
+def search_faqs_hybrid(
+    query: str,
+    k: int = 3,
+    filters: RetrievalFilter | None = None,
+    vector_weight: float = 1.0,
+    keyword_weight: float = 1.0,
+) -> RetrievalResult:
+    """Convenience: one-shot hybrid retrieval via the singleton FaqRetriever."""
+    return get_retriever().search_hybrid(
+        query=query,
+        k=k,
+        filters=filters,
+        vector_weight=vector_weight,
+        keyword_weight=keyword_weight,
     )

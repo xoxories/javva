@@ -17,20 +17,27 @@ Quickstart:
         print(r.score, r.id, r.question)
 """
 
+from app.rag.hybrid import reciprocal_rank_fusion
+from app.rag.keyword import KeywordSearcher, get_keyword_searcher
 from app.rag.retriever import (
     FaqRetriever,
     RetrievalError,
     get_retriever,
     search_faqs,
+    search_faqs_hybrid,
 )
 from app.rag.schemas import RetrievalFilter, RetrievalResult, RetrievedFaq
 
 __all__ = [
     "FaqRetriever",
+    "KeywordSearcher",
     "RetrievalError",
     "RetrievalFilter",
     "RetrievalResult",
     "RetrievedFaq",
+    "get_keyword_searcher",
     "get_retriever",
+    "reciprocal_rank_fusion",
     "search_faqs",
+    "search_faqs_hybrid",
 ]

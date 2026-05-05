@@ -13,7 +13,12 @@ from __future__ import annotations
 
 import pytest
 
-from app.rag import RetrievalFilter, search_faqs
+from app.rag import (
+    RetrievalFilter,
+    reciprocal_rank_fusion,
+    search_faqs,
+    search_faqs_hybrid,
+)
 
 
 def test_basic_search_en() -> None:
@@ -103,3 +108,33 @@ def test_empty_query_raises() -> None:
 def test_whitespace_query_raises() -> None:
     with pytest.raises(ValueError):
         search_faqs("   ", k=3)
+
+
+def test_hybrid_search_basic() -> None:
+    result = search_faqs_hybrid("MT5 setup")
+    assert result.total_found > 0
+    assert all(r.id.startswith("faq-") for r in result.results)
+
+
+def test_hybrid_search_with_filter() -> None:
+    result = search_faqs_hybrid(
+        "deposit fees",
+        filters=RetrievalFilter(category="deposits_withdrawals"),
+    )
+    assert all(r.category == "deposits_withdrawals" for r in result.results)
+
+
+def test_rrf_combination() -> None:
+    # Pure unit test with mock inputs — no API calls.
+    vec = [(1, 0.9), (2, 0.8), (3, 0.7)]
+    kw = [(2, 5.0), (3, 4.0), (4, 3.0)]
+    out = reciprocal_rank_fusion(vec, kw)
+    top2 = [id_ for id_, _ in out[:2]]
+    assert 2 in top2 and 3 in top2  # IDs in both lists rank highest
+
+
+def test_hybrid_vs_vector_for_exact_term() -> None:
+    v = search_faqs("MT5", k=5)
+    h = search_faqs_hybrid("MT5", k=5)
+    assert len(h.results) > 0
+    # Soft assertion — hybrid should at least produce results.

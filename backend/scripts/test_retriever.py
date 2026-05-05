@@ -15,7 +15,7 @@ from typing import Any
 from rich.console import Console
 from rich.table import Table
 
-from app.rag import RetrievalFilter, search_faqs
+from app.rag import RetrievalFilter, search_faqs, search_faqs_hybrid
 
 
 console = Console()
@@ -66,9 +66,57 @@ def render(label: str, query: str, opts: dict[str, Any]) -> None:
     console.print()
 
 
+COMPARISON_SCENARIOS: list[tuple[str, str]] = [
+    ("8. Exact term: 'MT5 setup'", "MT5 setup"),
+    ("9. Acronym + term: 'EUR/USD pip'", "EUR/USD pip"),
+    ("10. Acronym: 'KYC documents'", "KYC documents"),
+    ("11. Conceptual: 'How does leverage work?'", "How does leverage work?"),
+]
+
+
+def render_comparison(label: str, query: str) -> None:
+    console.rule(f"[bold]{label}")
+    console.print(f"[bold]Query:[/bold] {query}\n")
+
+    vec = search_faqs(query, k=5)
+    hyb = search_faqs_hybrid(query, k=5)
+
+    t = Table(title="vector (left) vs hybrid (right) — top 5")
+    t.add_column("rank", style="cyan", no_wrap=True)
+    t.add_column("vector id", style="green", no_wrap=True)
+    t.add_column("v score", style="dim", no_wrap=True)
+    t.add_column("hybrid id", style="magenta", no_wrap=True)
+    t.add_column("h score", style="dim", no_wrap=True)
+
+    n = max(len(vec.results), len(hyb.results))
+    for i in range(n):
+        v_id = vec.results[i].id if i < len(vec.results) else "-"
+        v_score = f"{vec.results[i].score:.4f}" if i < len(vec.results) else "-"
+        h_id = hyb.results[i].id if i < len(hyb.results) else "-"
+        h_score = f"{hyb.results[i].score:.4f}" if i < len(hyb.results) else "-"
+        t.add_row(str(i + 1), v_id, v_score, h_id, h_score)
+    console.print(t)
+
+    vec_ids = [r.id for r in vec.results]
+    hyb_ids = [r.id for r in hyb.results]
+    overlap = set(vec_ids) & set(hyb_ids)
+    console.print(
+        f"[dim]overlap: {len(overlap)}/{n}   "
+        f"vector-only: {sorted(set(vec_ids) - set(hyb_ids))}   "
+        f"hybrid-only: {sorted(set(hyb_ids) - set(vec_ids))}[/dim]\n"
+    )
+
+
 def main() -> int:
     for label, query, opts in SCENARIOS:
         render(label, query, opts)
+
+    console.print()
+    console.rule("[bold]Hybrid vs Vector Comparison (scenarios 8-11)")
+    console.print()
+    for label, query in COMPARISON_SCENARIOS:
+        render_comparison(label, query)
+
     return 0
 
 
