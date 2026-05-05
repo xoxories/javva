@@ -57,6 +57,15 @@ COLLECTION_NAME = "javva_kb"
 EMBEDDING_MODEL = "gemini-embedding-001"
 VECTOR_DIM = 768
 
+# Qdrant Cloud requires explicit payload-field indexes before you can
+# filter on those fields. Without these, retriever.py's category/language/tag
+# filters return 400 Bad Request.
+PAYLOAD_INDEXES: list[tuple[str, models.PayloadSchemaType]] = [
+    ("category", models.PayloadSchemaType.KEYWORD),
+    ("language", models.PayloadSchemaType.KEYWORD),
+    ("tags",     models.PayloadSchemaType.KEYWORD),
+]
+
 console = Console()
 
 
@@ -182,6 +191,15 @@ def main() -> int:
             )
             return 1
         console.print(f"[dim]Appending into existing {COLLECTION_NAME}[/dim]")
+
+    # Ensure payload indexes exist on filterable fields (idempotent).
+    for field, schema in PAYLOAD_INDEXES:
+        qdrant.create_payload_index(
+            collection_name=COLLECTION_NAME,
+            field_name=field,
+            field_schema=schema,
+        )
+    console.print(f"[dim]Payload indexes ensured on: {', '.join(f for f, _ in PAYLOAD_INDEXES)}[/dim]")
 
     start_time = time.time()
     api_calls = 1  # the probe
