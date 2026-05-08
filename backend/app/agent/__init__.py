@@ -1,9 +1,13 @@
-"""Javva agent module — tools, schemas, and system prompt.
+"""Javva agent module — tools, schemas, system prompt, and agent loop.
 
-Phase C.1 shipped tool definitions. Phase C.2 ships the system prompt.
-Phase C.3 will add the pydantic-ai Agent that wires them together.
+Phase C.1 shipped tool definitions, C.2 the system prompt, C.3 the
+agent loop (this).
 
 Public surface:
+    chat()                   - main async entry point (stateless)
+    ChatResponse             - response schema with metadata
+    get_agent()              - lazy singleton Pydantic AI Agent
+
     JAVVA_SYSTEM_PROMPT      - production system prompt
     TONE_GUIDELINES          - tone label -> short description
     validate_prompt()        - structural integrity check
@@ -12,6 +16,7 @@ Public surface:
     *Input / *Output / *Info - Pydantic schemas for tool I/O
 """
 
+from app.agent.agent import ChatResponse, chat, get_agent
 from app.agent.prompts import (
     JAVVA_SYSTEM_PROMPT,
     TONE_GUIDELINES,
@@ -42,6 +47,10 @@ from app.agent.tools import (
 )
 
 __all__ = [
+    # Agent
+    "ChatResponse",
+    "chat",
+    "get_agent",
     # Prompt
     "JAVVA_SYSTEM_PROMPT",
     "TONE_GUIDELINES",
