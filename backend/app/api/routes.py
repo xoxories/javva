@@ -35,7 +35,7 @@ log = structlog.get_logger(__name__)
 router = APIRouter()
 
 
-_start_time = time.time()
+_start_time = time.monotonic()
 
 
 async def verify_api_key(x_api_key: str | None = Header(None)) -> str | None:
@@ -106,7 +106,7 @@ async def health() -> HealthResponse:
     return HealthResponse(
         status=overall_status,
         services=services,
-        uptime_seconds=int(time.time() - _start_time),
+        uptime_seconds=int(time.monotonic() - _start_time),
     )
 
 
