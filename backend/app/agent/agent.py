@@ -70,14 +70,35 @@ _agent_instance: Agent | None = None
 
 
 def get_agent() -> Agent:
-    """Return the module-level singleton Pydantic AI agent (lazy-init)."""
+    """Return the module-level singleton Pydantic AI agent (lazy-init).
+
+    Provider is chosen by `settings.use_vertex_ai`. We use the unified
+    `GoogleProvider` for both paths — the legacy split (`GoogleGLAProvider`
+    / `GoogleVertexProvider`) has an internal bug on pydantic-ai 1.90.0
+    with the current google-genai SDK (`'AsyncClient' object has no
+    attribute 'aio'`).
+    """
     global _agent_instance
     if _agent_instance is None:
+        if settings.use_vertex_ai:
+            if not settings.gcp_project_id:
+                raise RuntimeError(
+                    "use_vertex_ai=True requires GCP_PROJECT_ID in .env"
+                )
+            provider = GoogleProvider(
+                vertexai=True,
+                project=settings.gcp_project_id,
+                location=settings.gcp_location,
+            )
+        else:
+            if not settings.gemini_api_key:
+                raise RuntimeError(
+                    "use_vertex_ai=False requires GEMINI_API_KEY in .env"
+                )
+            provider = GoogleProvider(api_key=settings.gemini_api_key)
+
         _agent_instance = Agent(
-            GoogleModel(
-                settings.gemini_default_model,
-                provider=GoogleProvider(api_key=settings.gemini_api_key),
-            ),
+            GoogleModel(settings.gemini_default_model, provider=provider),
             system_prompt=JAVVA_SYSTEM_PROMPT,
             tools=[
                 Tool(search_faqs_tool),
@@ -91,6 +112,7 @@ def get_agent() -> Agent:
         log.info(
             "agent_initialized",
             model=settings.gemini_default_model,
+            provider="vertex_ai" if settings.use_vertex_ai else "aistudio",
             tool_count=5,
         )
     return _agent_instance

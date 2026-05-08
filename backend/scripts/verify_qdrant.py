@@ -19,6 +19,7 @@ from qdrant_client import QdrantClient
 from rich.console import Console
 
 from app.config import settings
+from app.llm_client import get_genai_client
 
 
 COLLECTION_NAME = "javva_kb"
@@ -60,7 +61,7 @@ def main() -> int:
         return 1
 
     qdrant = QdrantClient(url=settings.qdrant_url, api_key=settings.qdrant_api_key)
-    gemini = genai.Client(api_key=settings.gemini_api_key)
+    gemini = get_genai_client()
 
     console.rule("[bold]verify_qdrant")
 

@@ -19,23 +19,20 @@ from tenacity import (
     wait_exponential,
 )
 
-from app.config import settings
+from app.llm_client import get_genai_client
 
 
 EMBEDDING_MODEL = "gemini-embedding-001"
 VECTOR_DIM = 768
 
-_client: genai.Client | None = None
-
 
 def get_gemini_client() -> genai.Client:
-    """Return a cached genai.Client (lazy-initialized on first call)."""
-    global _client
-    if _client is None:
-        if not settings.gemini_api_key:
-            raise RuntimeError("GEMINI_API_KEY is not set in .env")
-        _client = genai.Client(api_key=settings.gemini_api_key)
-    return _client
+    """Return the shared genai.Client (delegates to app.llm_client).
+
+    Honors the `USE_VERTEX_AI` flag in .env — see app.llm_client for
+    provider selection logic.
+    """
+    return get_genai_client()
 
 
 @retry(

@@ -12,6 +12,14 @@ class Settings(BaseSettings):
     gemini_api_key: str = ""
     gemini_default_model: str = "gemini-2.5-flash"
 
+    # Vertex AI configuration. When use_vertex_ai=True, the LLM client is
+    # built against Google Cloud Vertex AI (uses GCP credits, ADC auth).
+    # Otherwise it uses aistudio.google.com Gemini API direct (api_key auth,
+    # 20 RPD free tier cap).
+    use_vertex_ai: bool = False
+    gcp_project_id: str | None = None
+    gcp_location: str = "us-central1"
+
     database_url: str = ""
     qdrant_url: str = ""
     qdrant_api_key: str = ""

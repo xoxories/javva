@@ -48,6 +48,7 @@ from tenacity import (
 )
 
 from app.config import settings
+from app.llm_client import get_genai_client
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -157,7 +158,7 @@ def main() -> int:
         console.print(f"  [dim]{json.dumps(build_payload(sample), ensure_ascii=False, indent=2)}[/dim]")
         return 0
 
-    gemini = genai.Client(api_key=settings.gemini_api_key)
+    gemini = get_genai_client()
     qdrant = QdrantClient(url=settings.qdrant_url, api_key=settings.qdrant_api_key)
 
     console.print("\n[blue]Probing embedding dimension...[/blue]")
