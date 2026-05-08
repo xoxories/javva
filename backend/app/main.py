@@ -1,25 +1,72 @@
+"""Javva FastAPI application entry point.
+
+Wires up CORS middleware, mounts the API router from `app.api.routes`,
+and exposes a public welcome endpoint at the root path. All `/chat*` and
+`/health` endpoints live in the API router.
+"""
+
+from __future__ import annotations
+
+from contextlib import asynccontextmanager
+from typing import AsyncIterator
+
+import structlog
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+from app.api.routes import router as api_router
+from app.config import settings
+
+
+log = structlog.get_logger(__name__)
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI) -> AsyncIterator[None]:
+    if not settings.api_key:
+        log.warning(
+            "api_auth_disabled",
+            reason=(
+                "api_key not set in .env — /chat endpoints are unauthenticated "
+                "(dev mode). Set API_KEY before deploying."
+            ),
+        )
+    log.info(
+        "javva_api_started",
+        llm_provider="vertex_ai" if settings.use_vertex_ai else "aistudio",
+        env=settings.env,
+    )
+    yield
+
 
 app = FastAPI(
-    title="Javva Backend",
+    title="Javva API",
+    description="AI customer support agent for forex/CFD trading.",
     version="0.1.0",
-    description="AI customer support for trading platforms",
+    lifespan=lifespan,
+)
+
+
+# Phase G will tighten allow_origins for production; "*" is fine for dev.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
 @app.get("/")
-def root() -> dict[str, str]:
-    """Welcome endpoint with API metadata."""
+async def root() -> dict:
+    """Public welcome with API metadata."""
     return {
-        "name": "Javva Backend",
+        "name": "Javva",
+        "description": "AI customer support agent",
         "version": "0.1.0",
-        "description": "AI customer support for trading platforms",
-        "docs_url": "/docs",
-        "health_url": "/health",
+        "docs": "/docs",
+        "health": "/health",
     }
 
 
-@app.get("/health")
-def health() -> dict[str, str]:
-    """Health check endpoint."""
-    return {"status": "ok"}
+app.include_router(api_router)

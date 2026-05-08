@@ -20,6 +20,11 @@ class Settings(BaseSettings):
     gcp_project_id: str | None = None
     gcp_location: str = "us-central1"
 
+    # API auth — when set, all /chat endpoints require X-API-Key header
+    # matching this value. When unset (None or empty), auth is disabled
+    # and a warning is logged at startup (dev-mode bypass).
+    api_key: str | None = None
+
     database_url: str = ""
     qdrant_url: str = ""
     qdrant_api_key: str = ""
