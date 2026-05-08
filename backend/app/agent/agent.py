@@ -23,12 +23,14 @@ validation`).
 
 from __future__ import annotations
 
+import asyncio
 import time
 from typing import Any
 
 import structlog
 from pydantic import BaseModel, ConfigDict
 from pydantic_ai import Agent, Tool
+from pydantic_ai.messages import TextPart, ToolCallPart, UserPromptPart
 from pydantic_ai.models.google import GoogleModel
 from pydantic_ai.providers.google import GoogleProvider
 
@@ -95,17 +97,53 @@ def get_agent() -> Agent:
 
 
 def _extract_tools_called(messages: list) -> list[str]:
-    """Walk message parts and collect tool_name from ToolCallPart-shaped parts.
+    """Collect tool names from ToolCallPart instances in the message stream.
 
-    Uses duck-typing on class name + presence of `args` so it survives
-    minor pydantic-ai version drift.
+    Uses `isinstance` rather than duck-typing on `tool_name`, because
+    ToolReturnPart also has that attribute and was double-counting tools
+    in the earlier implementation.
     """
     tools: list[str] = []
     for msg in messages:
         for part in getattr(msg, "parts", []):
-            if type(part).__name__ == "ToolCallPart" and hasattr(part, "tool_name"):
+            if isinstance(part, ToolCallPart):
                 tools.append(part.tool_name)
     return tools
+
+
+def summarize_messages(message_history: list) -> dict[str, int]:
+    """Extract observability stats from a pydantic-ai message_history list.
+
+    Useful for the Phase D HTTP API to surface session-level metrics in
+    structured logs and dashboards.
+
+    Returns a dict with:
+      - turn_count: number of user turns in the conversation
+      - user_messages: same as turn_count (kept for clarity in logs)
+      - tool_calls: total ToolCallPart instances across all messages
+      - assistant_responses: total TextPart instances (model replies)
+    """
+    turn_count = 0
+    user_messages = 0
+    tool_calls = 0
+    assistant_responses = 0
+
+    for msg in message_history:
+        for part in getattr(msg, "parts", []):
+            if isinstance(part, UserPromptPart):
+                user_messages += 1
+                turn_count += 1
+            elif isinstance(part, ToolCallPart):
+                tool_calls += 1
+            elif isinstance(part, TextPart):
+                assistant_responses += 1
+
+    return {
+        "turn_count": turn_count,
+        "user_messages": user_messages,
+        "tool_calls": tool_calls,
+        "assistant_responses": assistant_responses,
+    }
 
 
 def _extract_usage(usage_obj: Any) -> dict[str, int]:
@@ -144,9 +182,9 @@ async def chat(
 
     try:
         agent = get_agent()
-        result = await agent.run(
-            user_message,
-            message_history=message_history or [],
+        result = await asyncio.wait_for(
+            agent.run(user_message, message_history=message_history or []),
+            timeout=30.0,
         )
 
         all_messages = result.all_messages()
@@ -175,6 +213,18 @@ async def chat(
             duration_ms=duration_ms,
         )
 
+    except asyncio.TimeoutError:
+        duration_ms = int((time.time() - start) * 1000)
+        log.error("chat_timeout", duration_ms=duration_ms)
+        return ChatResponse(
+            reply=(
+                "I apologize, the request is taking longer than expected. "
+                "Please try again."
+            ),
+            message_history=message_history or [],
+            error="timeout",
+            duration_ms=duration_ms,
+        )
     except Exception as e:
         duration_ms = int((time.time() - start) * 1000)
         log.error("chat_failed", error=str(e), duration_ms=duration_ms)

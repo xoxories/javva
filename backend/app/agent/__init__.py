@@ -16,7 +16,7 @@ Public surface:
     *Input / *Output / *Info - Pydantic schemas for tool I/O
 """
 
-from app.agent.agent import ChatResponse, chat, get_agent
+from app.agent.agent import ChatResponse, chat, get_agent, summarize_messages
 from app.agent.prompts import (
     JAVVA_SYSTEM_PROMPT,
     TONE_GUIDELINES,
@@ -51,6 +51,7 @@ __all__ = [
     "ChatResponse",
     "chat",
     "get_agent",
+    "summarize_messages",
     # Prompt
     "JAVVA_SYSTEM_PROMPT",
     "TONE_GUIDELINES",
