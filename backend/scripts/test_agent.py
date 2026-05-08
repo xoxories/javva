@@ -128,8 +128,58 @@ async def main() -> None:
     turn2 = await throttled_chat(turn2_user, message_history=turn1.message_history)
     render("    Turn 2 (with context)", turn2_user, turn2)
 
+    # 9. Ambiguous user_id — no USR prefix, agent should ask for valid format
+    render(
+        "9. Ambiguous user_id (no USR prefix)",
+        "Check my balance, ID 123456",
+        await throttled_chat("Check my balance, ID 123456"),
+    )
+
+    # 10. Multi-tool single turn — should call lookup_account AND list_transactions
+    render(
+        "10. Multi-tool single turn",
+        "USR000001 — what's my balance and recent transactions?",
+        await throttled_chat(
+            "USR000001 — what's my balance and recent transactions?"
+        ),
+    )
+
+    # 11. Suspended account — empathetic + escalation suggestion
+    render(
+        "11. Suspended account — USR000453",
+        "Why can't I trade? My ID is USR000453",
+        await throttled_chat("Why can't I trade? My ID is USR000453"),
+    )
+
+    # 12. KYC issue — deposit failure routed to KYC check
+    render(
+        "12. KYC issue — deposit failure",
+        "My deposit isn't going through. USR000050",
+        await throttled_chat("My deposit isn't going through. USR000050"),
+    )
+
+    # 13. Hostile user — apologetic + escalation, no defensiveness
+    render(
+        "13. Hostile user — escalation",
+        "This platform is GARBAGE! I'm losing thousands! "
+        "You're SCAMMERS! Get me your manager NOW!",
+        await throttled_chat(
+            "This platform is GARBAGE! I'm losing thousands! "
+            "You're SCAMMERS! Get me your manager NOW!"
+        ),
+    )
+
+    # 14. Off-topic — polite scope redirect, no tools called
+    render(
+        "14. Off-topic — Python script request",
+        "Can you write me a Python script to calculate Fibonacci?",
+        await throttled_chat(
+            "Can you write me a Python script to calculate Fibonacci?"
+        ),
+    )
+
     overall = int((time.time() - overall_start) * 1000)
-    console.print(f"[bold]Total wall time:[/bold] {overall} ms across 9 turns")
+    console.print(f"[bold]Total wall time:[/bold] {overall} ms across 15 turns")
 
 
 if __name__ == "__main__":

@@ -1,22 +1,20 @@
-"""Tests for app.agent.chat — integration tests.
+"""Comprehensive integration tests for agent loop.
 
-These hit real Gemini + Postgres + Qdrant. Required env (.env):
-GEMINI_API_KEY, DATABASE_URL, QDRANT_URL, QDRANT_API_KEY. The DB and
-Qdrant collection must already be seeded (Phase A.2 / B.1).
+These tests hit real Gemini API with daily quota (20 RPD on free tier).
+Tests include 7s sleep between calls. Run after quota reset (midnight
+Pacific) to avoid 429s during burst testing.
 
-Each test invokes the full agent loop, which can take 2–10s per call due
-to LLM latency + tool round-trips.
+Coverage:
+- Basic FAQ queries (EN + ID)
+- Account lookups (existing, suspended)
+- Multi-tool single turn (parallel tool calling)
+- Multi-turn context retention
+- Trading advice refusal
+- Hostile user escalation
+- Off-topic redirection
+- Invalid user_id format handling
 
-Quota note: gemini-2.5 models on the *free tier* have a 20-request-per-day
-cap. Running this whole suite uses ~14 LLM calls. If quota is exhausted,
-all tests fail with 429s; resume after quota reset (~midnight Pacific) or
-on a paid-tier project.
-
-Throttling: `throttle` is a SYNC autouse fixture that calls `time.sleep(7)`
-after each test. Earlier `@pytest_asyncio.fixture` async-autouse pattern
-caused "Event loop is closed" failures because pytest-asyncio's per-function
-loop scope tears down the loop before the post-yield `await` runs. Sync
-sleep sidesteps the loop entirely.
+Throttling: `throttle` is a SYNC autouse fixture (see fixture docstring).
 
 Run from backend/:
     uv run pytest tests/unit/test_agent.py -v
@@ -112,3 +110,35 @@ async def test_multi_turn_context() -> None:
     assert turn2.error is None
     # Soft check: turn 2 should produce a substantive response.
     assert len(turn2.reply) > 20
+
+
+async def test_ambiguous_user_id() -> None:
+    """Bare digits (no USR prefix) should NOT trigger lookup_account."""
+    result = await chat("Check my balance, ID 123456")
+    assert "lookup_account_tool" not in result.tools_called
+    assert result.error is None
+
+
+async def test_multi_tool_single_turn() -> None:
+    """A combined balance+transactions query should call lookup_account
+    (and ideally list_transactions in the same turn)."""
+    result = await chat("USR000001 — balance and recent transactions?")
+    assert "lookup_account_tool" in result.tools_called
+    assert result.error is None
+
+
+async def test_hostile_user_escalation() -> None:
+    """Hostile/profane complaint should escalate, not respond defensively."""
+    result = await chat(
+        "This platform is GARBAGE! I'm losing money! "
+        "Get me your manager NOW!"
+    )
+    assert "escalate_to_human_tool" in result.tools_called
+    assert result.error is None
+
+
+async def test_off_topic_request() -> None:
+    """Off-topic dev request (Python coding) should not call any tool."""
+    result = await chat("Write me a Python Fibonacci script")
+    assert len(result.tools_called) == 0
+    assert result.error is None
