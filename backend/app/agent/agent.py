@@ -28,6 +28,7 @@ import time
 from typing import Any
 
 import structlog
+from langfuse import propagate_attributes
 from pydantic import BaseModel, ConfigDict
 from pydantic_ai import Agent, Tool
 from pydantic_ai.messages import TextPart, ToolCallPart, UserPromptPart
@@ -43,6 +44,7 @@ from app.agent.tools import (
     search_faqs_tool,
 )
 from app.config import settings
+from app.observability import get_langfuse
 
 
 log = structlog.get_logger(__name__)
@@ -182,6 +184,7 @@ def _extract_usage(usage_obj: Any) -> dict[str, int]:
 async def chat(
     user_message: str,
     message_history: list | None = None,
+    session_id: str | None = None,
 ) -> ChatResponse:
     """Run a single turn of the Javva agent.
 
@@ -190,6 +193,9 @@ async def chat(
         message_history: List of pydantic-ai ModelMessage objects from prior
             turns (pass `previous_response.message_history`). None or
             empty list = first turn.
+        session_id: Optional session UUID. When set and Langfuse is enabled,
+            the trace is tagged with this id so multi-turn conversations
+            group together in the dashboard.
 
     Returns:
         ChatResponse. On failure, returns a user-facing apology message
@@ -200,62 +206,136 @@ async def chat(
         "chat_request",
         message=user_message[:100],
         history_length=len(message_history or []),
+        session_id=session_id,
     )
 
+    langfuse = get_langfuse()
+    trace_attrs_ctx = None
+    span = None
+    if langfuse is not None:
+        try:
+            # `propagate_attributes` sets trace-level fields (session_id) via
+            # OTel baggage; must be entered *before* the span is created so
+            # the span inherits them.
+            if session_id:
+                trace_attrs_ctx = propagate_attributes(session_id=session_id)
+                trace_attrs_ctx.__enter__()
+            span = langfuse.start_observation(
+                name="chat_request",
+                as_type="span",
+                input={
+                    "message": user_message,
+                    "has_history": bool(message_history),
+                },
+                metadata={
+                    "session_id": session_id,
+                    "model": settings.gemini_default_model,
+                    "provider": (
+                        "vertex_ai" if settings.use_vertex_ai else "aistudio"
+                    ),
+                    "history_length": len(message_history or []),
+                },
+            )
+        except Exception as exc:
+            log.warning("langfuse_trace_create_failed", error=str(exc))
+            span = None
+
     try:
-        agent = get_agent()
-        result = await asyncio.wait_for(
-            agent.run(user_message, message_history=message_history or []),
-            timeout=30.0,
-        )
+        try:
+            agent = get_agent()
+            result = await asyncio.wait_for(
+                agent.run(user_message, message_history=message_history or []),
+                timeout=30.0,
+            )
 
-        all_messages = result.all_messages()
-        tools_called = _extract_tools_called(all_messages)
-        usage = _extract_usage(result.usage())
-        duration_ms = int((time.time() - start) * 1000)
+            all_messages = result.all_messages()
+            tools_called = _extract_tools_called(all_messages)
+            usage = _extract_usage(result.usage())
+            duration_ms = int((time.time() - start) * 1000)
 
-        reply = (
-            result.output
-            if isinstance(result.output, str)
-            else str(result.output)
-        )
+            reply = (
+                result.output
+                if isinstance(result.output, str)
+                else str(result.output)
+            )
 
-        log.info(
-            "chat_response",
-            tools_called=tools_called,
-            total_tokens=usage["total_tokens"],
-            duration_ms=duration_ms,
-        )
+            log.info(
+                "chat_response",
+                tools_called=tools_called,
+                total_tokens=usage["total_tokens"],
+                duration_ms=duration_ms,
+            )
 
-        return ChatResponse(
-            reply=reply,
-            message_history=all_messages,
-            tools_called=tools_called,
-            usage=usage,
-            duration_ms=duration_ms,
-        )
+            if span is not None:
+                try:
+                    span.update(
+                        output={"reply": reply, "tools_called": tools_called},
+                        metadata={
+                            "duration_ms": duration_ms,
+                            "total_tokens": usage["total_tokens"],
+                            "tools_count": len(tools_called),
+                        },
+                    )
+                except Exception as exc:
+                    log.warning(
+                        "langfuse_trace_update_failed", error=str(exc)
+                    )
 
-    except asyncio.TimeoutError:
-        duration_ms = int((time.time() - start) * 1000)
-        log.error("chat_timeout", duration_ms=duration_ms)
-        return ChatResponse(
-            reply=(
-                "I apologize, the request is taking longer than expected. "
-                "Please try again."
-            ),
-            message_history=message_history or [],
-            error="timeout",
-            duration_ms=duration_ms,
-        )
-    except Exception as e:
-        duration_ms = int((time.time() - start) * 1000)
-        log.error("chat_failed", error=str(e), duration_ms=duration_ms)
-        return ChatResponse(
-            reply=(
-                "I apologize, but I'm experiencing technical difficulties. "
-                "Please try again, or contact our support team if the issue persists."
-            ),
-            message_history=message_history or [],
-            error=str(e)[:200],
-            duration_ms=duration_ms,
-        )
+            return ChatResponse(
+                reply=reply,
+                message_history=all_messages,
+                tools_called=tools_called,
+                usage=usage,
+                duration_ms=duration_ms,
+            )
+
+        except asyncio.TimeoutError:
+            duration_ms = int((time.time() - start) * 1000)
+            log.error("chat_timeout", duration_ms=duration_ms)
+            if span is not None:
+                try:
+                    span.update(output={"error": "timeout"}, level="ERROR")
+                except Exception:
+                    pass
+            return ChatResponse(
+                reply=(
+                    "I apologize, the request is taking longer than expected. "
+                    "Please try again."
+                ),
+                message_history=message_history or [],
+                error="timeout",
+                duration_ms=duration_ms,
+            )
+        except Exception as e:
+            duration_ms = int((time.time() - start) * 1000)
+            log.error("chat_failed", error=str(e), duration_ms=duration_ms)
+            if span is not None:
+                try:
+                    span.update(output={"error": str(e)}, level="ERROR")
+                except Exception:
+                    pass
+            return ChatResponse(
+                reply=(
+                    "I apologize, but I'm experiencing technical difficulties. "
+                    "Please try again, or contact our support team if the issue persists."
+                ),
+                message_history=message_history or [],
+                error=str(e)[:200],
+                duration_ms=duration_ms,
+            )
+    finally:
+        if span is not None:
+            try:
+                span.end()
+            except Exception:
+                pass
+        if trace_attrs_ctx is not None:
+            try:
+                trace_attrs_ctx.__exit__(None, None, None)
+            except Exception:
+                pass
+        if langfuse is not None:
+            try:
+                langfuse.flush()
+            except Exception:
+                pass

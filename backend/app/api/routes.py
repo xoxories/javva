@@ -160,6 +160,7 @@ async def chat_endpoint(request: ChatRequest) -> ChatAPIResponse:
     result = await chat(
         user_message=request.message,
         message_history=message_history,
+        session_id=session_id,
     )
 
     store.update_session(

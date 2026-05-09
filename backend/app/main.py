@@ -16,6 +16,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import router as api_router
 from app.config import settings
+from app.observability import flush_traces, is_observability_enabled
 
 
 log = structlog.get_logger(__name__)
@@ -31,12 +32,15 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
                 "(dev mode). Set API_KEY before deploying."
             ),
         )
+    if is_observability_enabled():
+        log.info("observability_enabled", provider="langfuse")
     log.info(
         "javva_api_started",
         llm_provider="vertex_ai" if settings.use_vertex_ai else "aistudio",
         env=settings.env,
     )
     yield
+    flush_traces()
 
 
 app = FastAPI(

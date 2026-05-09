@@ -28,9 +28,13 @@ class Settings(BaseSettings):
     database_url: str = ""
     qdrant_url: str = ""
     qdrant_api_key: str = ""
-    langfuse_host: str = ""
+    # Langfuse observability — when keys are set and `langfuse_enabled=True`,
+    # every chat() call is wrapped in a Langfuse span with input / output /
+    # metadata. Free tier: 50K observations/month at cloud.langfuse.com.
+    langfuse_host: str = "https://cloud.langfuse.com"
     langfuse_public_key: str = ""
     langfuse_secret_key: str = ""
+    langfuse_enabled: bool = True
     jwt_secret: str = ""
     cors_origins: str = ""
     env: str = "development"
