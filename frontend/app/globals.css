@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --javva-bg: #FFFFFF;
+    --javva-surface: #F8FAFC;
+    --javva-primary: #00B36F;
+    --javva-primary-hover: #00935C;
+    --javva-text: #0F172A;
+    --javva-text-secondary: #64748B;
+    --javva-border: #E2E8F0;
+    --javva-user-bubble: #1E40AF;
+  }
+
+  .dark {
+    --javva-bg: #0A0E1A;
+    --javva-surface: #131829;
+    --javva-primary: #00D582;
+    --javva-primary-hover: #00B36F;
+    --javva-text: #F8FAFC;
+    --javva-text-secondary: #94A3B8;
+    --javva-border: #1E293B;
+    --javva-user-bubble: #1E3A8A;
+  }
+
+  body {
+    background-color: var(--javva-bg);
+    color: var(--javva-text);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  /* Prevent layout shift from theme transition */
+  html {
+    color-scheme: light dark;
+  }
+}
