@@ -16,6 +16,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import router as api_router
 from app.config import settings
+from app.credentials import decode_service_account_credentials
 from app.observability import flush_traces, is_observability_enabled
 
 
@@ -24,6 +25,10 @@ log = structlog.get_logger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
+    # Resolve Vertex AI credentials first; later startup steps (and the
+    # first request) may instantiate the genai client, which reads
+    # GOOGLE_APPLICATION_CREDENTIALS at construction time.
+    decode_service_account_credentials()
     if not settings.api_key:
         log.warning(
             "api_auth_disabled",

@@ -1,0 +1,7 @@
+
+# Service account credentials (Phase Deployment)
+service-account-key.json
+*-key.json
+gen-lang-client-*.json
+*Zone.Identifier
+*.json.key
