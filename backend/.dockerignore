@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+.venv/
+.pytest_cache/
+tests/
+.env
+service-account-key.json
+*-key.json
+gen-lang-client-*.json
+app/eval/results/
