@@ -15,7 +15,8 @@ import time
 
 import psycopg
 import structlog
-from fastapi import APIRouter, Depends, Header, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Security, status
+from fastapi.security import APIKeyHeader
 from qdrant_client import QdrantClient
 
 from app.agent import chat
@@ -38,8 +39,21 @@ router = APIRouter()
 _start_time = time.monotonic()
 
 
-async def verify_api_key(x_api_key: str | None = Header(None)) -> str | None:
+api_key_header = APIKeyHeader(
+    name="X-API-Key",
+    auto_error=False,
+    description="API key for authenticated endpoints (X-API-Key header)",
+)
+
+
+async def verify_api_key(
+    api_key: str | None = Security(api_key_header),
+) -> str | None:
     """Verify X-API-Key header against `settings.api_key`.
+
+    Uses `APIKeyHeader` from `fastapi.security` so the dependency
+    registers as an OpenAPI security scheme — Swagger UI then renders
+    the 'Authorize' button at /docs and remembers the key across calls.
 
     When `settings.api_key` is unset (None or empty), authentication is
     disabled — dev mode. A startup warning is logged in `app.main` so
@@ -47,17 +61,17 @@ async def verify_api_key(x_api_key: str | None = Header(None)) -> str | None:
     """
     if not settings.api_key:
         return None
-    if not x_api_key:
+    if not api_key:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="X-API-Key header required",
         )
-    if x_api_key != settings.api_key:
+    if api_key != settings.api_key:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Invalid API key",
         )
-    return x_api_key
+    return api_key
 
 
 @router.get("/health", response_model=HealthResponse)
