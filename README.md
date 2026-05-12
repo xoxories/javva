@@ -7,6 +7,7 @@ AI customer support agent for forex/CFD trading platforms. Bilingual
 
 - **Backend API**: https://javva-production.up.railway.app
 - **API Docs (Swagger)**: https://javva-production.up.railway.app/docs
+- **Link**: https://javva.vercel.app/
 
 Try asking:
 
